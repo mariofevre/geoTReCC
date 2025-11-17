@@ -1,0 +1,1862 @@
+
+
+ 
+
+	form, input{
+		margin:0;
+		font-size:10px;
+		display:inline-block;
+	}
+	
+	input{
+		width:50px;
+		vertical-align:bottom;
+	}
+	
+	input[type='file'],input[type='submit']{
+		width:10px;
+		height:15px;
+	}
+	
+	div.baseplano{
+		display:none;
+		position:relative;
+		margin-top:20px;
+	}
+	
+	
+	div.baseplano > .referencias{
+		display:block;
+		position:relative;
+		width:100%;
+		height:75px;
+		border-top:1px solid #000;
+	}
+	
+	div.baseplano > h2{
+		position:absolute;
+		top:-10px;
+		left:0px;
+		font-size:15px;
+	}
+	
+	h3{
+		margin-bottom:0px;
+		margin-top:8px;
+	}
+	ul{
+		margin:0px;
+	}
+	
+	#page {
+		font-size:11px;
+	}
+	#page > form{
+		display:inline;
+		margin:0;
+	}
+	
+	#columnaextensa, #columnalateral, h2{
+		margin:0px;
+	}
+	
+	.selector.activo{
+		color:red;
+	}
+	
+	.aux{
+		width:8px;
+		height:10px;
+		overflow:hidden;
+		border:1px solid #08AFD9;
+		cursor:pointer;
+		display:inline-block;
+		position:relative;
+		font-size:11px;
+	}
+	
+	.listado{
+		width:120px;
+		max-height:600px;
+		overflow-y:scroll;
+		border:1px solid #08AFD9;
+		background-color:#fff;
+		z-index:3;
+		position: absolute;
+	}
+	
+	.listado > span{
+		width:97px;
+		display:inline-block;
+		border-bottom:1px solid silver;
+		overflow:hidden;
+	}
+	
+	.listado > span:hover{
+		color:#08AFD9;
+	}
+	
+	.ano{
+		width:24px;
+	}
+	
+	.mes{
+		width:14px;
+	}
+	
+	.dia{
+		width:14px;
+	}
+	.titulos > div{
+		display:inline-block;
+		text-align:center;
+	}
+	
+	.grupo{
+		border-bottom:1px solid red;
+	}
+	
+	.fila{
+		border-bottom:1px solid gray;
+		position:relative;
+	} 
+	.fila.selecto{
+		background-color:red;
+	} 
+	
+	.fila > div, .fila > a{
+		display:inline-block;
+		height:30px;
+		vertical-align:top;
+	} 
+	
+	.fila .muestra{
+		width:40px;
+		border-left:1px solid #ddd;
+		border-right:1px solid #ddd;
+		cursor:help;
+		position:absolute;
+		top:0px;
+		right:10px;
+	} 
+	.fila div.muestra:hover{
+		border-left:1px solid #000;
+		border-right:1px solid #000;
+	} 
+	
+	.fila .muestra > img{
+		max-width:40px;
+		max-height:30px;
+	} 
+	
+	.fila .vinculos{
+		width:10px;
+		cursor:help;
+		position:absolute;
+		top:0px;
+		right:0px;
+	} 
+	.fila .vinculos > div{
+		display:inline-block;
+		background-color:#eee;
+		width:8px;
+		height:6px;
+		border:1px solid #08AFD9;
+		font-size:8px;
+		line-height:6px;
+		
+	} 
+	.fila .vinculos > div:hover{
+		border:1px solid #000;
+	} 
+	
+	.fila .muestra > img{
+		max-width:40px;
+		max-height:30px;
+	} 
+	
+	
+	.fila .fecha{
+		text-align:center;
+	} 
+	
+	.fila .fecha >div{
+		display:inline-block;
+		width:21px;
+	} 
+	
+	.fila .fecha{
+		width:21px;
+		line-height:10px;
+		float:left;
+	} 
+	
+	.fila .fecha .dia{
+		font-size:13px;
+	} 
+	
+	.fila .fecha .mes{
+		font-size:12px;
+	} 
+	
+	.fila .descripcion{
+		width:130px;
+		font-size:10px;	
+		height:23px;	
+	} 
+	
+	.fila .tipo{
+		width:100px;
+		height:10px;
+	} 
+	
+	.fila .nuevopunto{
+		width:13px;
+		height:10px;
+		line-height: 8px;
+		text-align:center;
+		background-color:#ddd;
+		margin-left:1px;
+	} 
+	
+	div.portapuntos{
+		display:block;
+		position:absolute;
+		z-index:2;
+		top:0px;
+		left:0px;
+	}
+	div.portapuntos > .locIm{
+		display:inline-block;
+		position:relative;
+		margin:2px; 0px;	
+		vertical-align: middle;
+	}
+	
+	.referencias{
+		font-size:11px;
+		vertical-align:middle;
+	}
+	.referencias > .columna{
+		width:180px;
+		margin-left:20px;
+		display:inline-block;
+		position:relative;
+	}
+	
+
+	.ficha{
+		display:block;
+		background-color:#fff;
+		font-size:12px;
+		position:relative;
+		margin-bottom:2px;
+		width:651px;
+		border:2px solid #000;
+	}
+	
+	.ficha .encabezado{
+		display:inline-block;
+		width:350px;
+		min-height:350px;
+		border-right:1px solid #000;
+		vertical-align:top;
+	}
+		
+	.ficha .encabezado .numero{
+		display:inline-block;
+		width:99px;
+		height:80px;
+		border-left:1px solid #000;
+		border-bottom:1px solid #000;		
+		vertical-align:top;
+		font-size: 35px;
+		text-align:center;
+		
+	}	
+	.ficha .encabezado .numero .titulo{
+		font-size:10px;
+		margin-top:10px;
+		display: block;
+	}
+	.ficha[nivel="PLAn1"] .encabezado .numero .titulo{
+			display:block;
+			position:absolute;
+			top:0px;
+			left:0px;
+			margin:0;
+	}
+	
+	.ficha[nivel="PLAn2"] .encabezado .numero .titulo{
+			display:block;
+			position:absolute;
+			top:0px;
+			left:0px;
+			margin:0;
+	}
+	
+	.ficha[nivel="PLAn1"] .jerarquias{
+		display:none;
+	}
+	
+	.ficha[nivel="PLAn1"] .nombre {
+		height: 80px;
+		width: 250px;
+		display: inline-block;
+		text-align:left;
+	}
+	
+	.ficha[nivel="PLAn1"] .nombre .tx{
+		width: 210px;
+	}
+	
+	.ficha[nivel="PLAn1"] .color{
+		height:80px;
+	}
+	
+	
+		
+	.ficha[nivel="PLAn2"] .numero {
+		height:40px;
+	}
+	
+	.ficha[nivel="PLAn2"] .jerarquias{
+		height:40px;
+	}	
+			
+	.ficha .columna2{		
+		display: inline-block;
+		width: 300px;
+		height: 300px;	
+		vertical-align: top;
+	}
+
+	.ficha .portafoto{
+		display:inline-block;
+		width:300px;
+		height:300px;
+		vertical-align:top;
+	}		
+	.ficha .categorias{
+		width:651px;
+		border-top:1px solid #000;
+	}	
+	.ficha .jerarquias{
+		width:250px;
+		display:inline-block;
+		border-bottom:1px solid #000;
+		height:80px;
+	}	
+	.ficha .jerarquias .tx{	
+		z-index: 10;
+		position: relative;
+	}
+	
+	.ficha .n1{
+		height: 39px;
+		font-size:14px;
+		border-bottom:1px solid #000;
+		line-height: 12px;
+		position: relative;
+		padding-right:16px;
+	}		
+	.ficha .titulo{
+		font-size:11px;
+	}		
+	.ficha .n2{
+		font-size:14px;
+		height: 39px;
+		line-height: 12px;
+		position:relative;
+		padding-right: 15px;
+	}		
+	
+	.ficha .color{
+		display:block;
+		position:absolute;
+		right:0px;
+		top:0px;
+		height:39px;
+		width:15px;
+	}
+			
+	.ficha .nombre{
+		text-align:center;
+		font-size:16px;
+		border-bottom:1px solid #000;
+		height:40px;
+		vertical-align:middle;
+		position:relative;
+	}	
+	.ficha .nombre .color{
+		width: 35px;
+	}
+	.ficha .nombre .tx{
+		text-align:center;
+		font-size:16px;
+		line-height:15px;
+		vertical-align:middle;
+		width:290px;
+		display:inline-block;
+		position:relative;
+		z-index:10;
+	}		
+	
+	.ficha .alineanom{
+		height:40px;
+		width:1px;
+		display:inline-block;
+		vertical-align: middle;
+	}	
+	
+	.ficha .responsable{
+		height:22px;
+		width:174px;
+		display:inline-block;
+		border-bottom:1px solid #000;
+		vertical-align: middle;
+		line-height: 10px;
+	}		
+		.ficha .responsable span.mini{
+			font-size:8px;
+		}
+	.ficha .estado{
+		height:22px;
+		width:175px;
+		display:inline-block;
+		border-bottom:1px solid #000;
+		border-left:1px solid #000;	
+		vertical-align: middle;	
+		line-height: 11px;
+	}	
+	
+	.ficha .descripcion{
+		margin:5px;
+	}	
+	
+	.ficha .imagen{
+		max-width:290px;
+		max-height:290px;
+		margin:5px;
+		margin-right:0px;
+		display:inline-block;
+		vertical-align: middle;
+	}	
+	
+	.ficha .alineaimg{
+		height:300px;
+		width:1px;
+		display:inline-block;
+		vertical-align: middle;
+	}	
+	.ficha .categorias>div{
+		border-bottom:1px solid #000;
+	}
+	.ficha .categorias>div:last-child{
+		border:none;
+	}
+	.ficha .categoria>div{
+		margin:5px;
+	}	
+	
+table#tabla{
+	font-size:10px;
+	border-collapse:collapse;
+}
+tr, td, th{
+	font-size:inherit;
+	border:1px solid #000;
+}
+tr.impar{
+	background-color:#ddd;
+	
+}
+tr.par{
+	background-color:#fff;
+	
+}
+th.localizacion{
+ width: 85px;
+}
+
+
+.ficha .resaltado{
+	font-weight:bold;
+}
+
+
+
+.aclaracion{
+	font-size:9px;
+	font-weight:bold;
+}
+
+body{
+	font-size:10px;
+	vertical-align:top;
+}	
+
+h2{
+	margin:0px;
+	font-size:10px;
+}
+
+#page{
+	font-size:inherit;
+}
+
+form{
+	margin:0;
+}
+
+
+textarea{
+	font-size:11px;
+	font-family:"Ropa Sans-local","Ropa Sans",sans-serif;
+	width:100%;
+}
+
+input{
+	font-size:11px;
+	font-family:"Ropa Sans-local","Ropa Sans",sans-serif;
+	width:100%;
+}
+
+input[type='submit'],input[type='button']{
+	width: 50%;
+}
+
+.PLAn1{
+	width:784px;
+	min-height:50px;
+	display:block;
+	border:1px solid #000;
+	background-color:#fff;
+}
+
+.PLAn2{
+	width:584px;
+	min-height:50px;
+	display:inline-block;
+	border:1px solid #000;
+	background-color:#eee;
+	margin:1px;
+}  
+
+.PLAn3{
+	width:384px;
+	min-height:50px;
+	display:inline-block;
+	border:1px solid #000;
+	background-color:#ccc;
+	margin:1px;
+	max-height: 200px;
+	overflow: hidden;
+	 transition: max-height 4s;
+}  
+
+div.PLAn3:hover{
+	max-height: 2000px;
+}
+
+.encabezado:hover{
+	color: #000;
+	background-color: #08afd9;
+}
+
+.PLAn1 .encabezado{
+	width:194px;
+	display:inline-block;
+	min-height:50px;
+	margin:1px;
+	vertical-align:top;
+}
+
+.PLAn3 .imagen{
+	height:50px;
+}
+
+.contenidos{
+	display:inline-block;
+	min-height:50px;
+	vertical-align:top;
+}
+
+#contenidos.contenidos{
+	display:block;
+}
+.PLAn1 > .contenidos{
+	width:194px;
+}	
+
+.PLAn2 > .contenidos{
+	width:384px;
+}
+
+.PLAn3 .contenidos{
+
+}
+
+.PLAn3>.encabezado{
+	width:100%;
+}	
+
+.color{
+	display:block;
+	height:10px;
+}
+
+.nombre{
+	font-size:13px;
+	font-weight:bold;
+}
+
+.numero{
+	position:relative;
+}
+
+form{
+	 display: inline-block;
+}
+
+form.oculto{
+	display:none;
+}
+form#modeloresponsable{
+	display:none;
+}
+.aux.num{
+	width:30px;
+	border:1px solid red;
+	position:absolute;
+	right:0px;
+}
+
+select{
+	display:inline-block;
+}
+
+.subtitulo{
+	display:block;
+	font-weight:bold;
+	font-size:12px;
+}
+
+#plan{
+	padding: 0px 40px;
+	background-color:#fff;
+	text-align:justify;
+	margin-top:25px;
+	max-height:75px;
+	position:relative;
+	overflow:hidden;
+	transition: max-height 1s;
+}
+
+
+#plan #botonmas, #plan #botonmenos{
+	position:absolute;
+	display:none;
+	border:1px solid #000;
+	bottom:2px;
+	right:2px;
+	font-size:11px;
+	background-color:#fff;
+}
+
+#plan[ampliado="1"]{
+	max-height:780px;
+}
+#plan[ampliado="1"] #botonmenos{
+	display:block;
+}
+#plan[ampliado="-1"] #botonmas{
+	display:block;
+}
+
+#plan p{
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+	
+#plan #nombre{
+	text-align:center;
+	
+}
+#plan #nombre span{
+	font-size:22px;
+	font-weight:bold;
+	text-align:center;
+	
+}
+#plan #descripcion span{
+	font-size:12px;
+	text-align:justify;	
+}
+
+#plan #descripcion span {
+
+}
+	
+
+
+
+/* FORMULARIO PLAN general */
+
+#form_pla_gral .escroleable{
+	margin:10px;
+}
+
+#form_pla_gral{
+	display:none;
+	width:60vw;
+	min-width:700px;
+	height:450px;
+	position:fixed;
+	left:5vw;
+	top:5vh; 
+	border: 2px solid #08afd9;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+    z-index:10;
+    background-color:#fff;
+    overflow-y: auto;
+    cursor:move;
+}
+
+#form_pla_gral input, select{
+	width:calc(100% - 70px);
+	background:#ffffff;
+	font-family:'Ropa Sans-local';
+	font-size:12px;
+	color:#08AFD9;
+	margin:0;
+	vertical-align: text-bottom;
+}
+#form_pla_gral label{
+	vertical-align: text-bottom;
+	height:auto;
+}
+
+
+#form_pla_gral input[type="submit"].general{
+    font-size: 13px;
+    height: 20px;
+    line-height: 13px;
+    width: 60px;
+    position:absolute;
+    top:35px;
+    right:5px;
+}	
+
+#form_pla_gral .eliminacion{
+    position:fixed;
+    top:105px;
+    left:650px;
+    width:50;
+    height:50px;
+}	
+
+
+#form_pla_gral input.cancela{
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size: 13px;
+    line-height: 13px;
+    width: 60px;
+    height: 20px;
+    line-height: 13px;
+}			
+#form_pla_gral input.eliminar{
+    position: absolute;
+    top:90px;
+    right:5px;
+    font-size: 11px;
+    line-height: 13px;
+    width: 60px;
+    height: 15px;
+    line-height: 13px;
+	background-color:red;
+	color:#555;
+	font-weight:bold;
+}
+
+#form_pla_gral .dragborde.izquierdo {
+    position: absolute;
+    left: -4px;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    cursor: w-resize;
+    background-color: lightblue;
+    z-index: 20;
+    height: 100%;
+}
+
+
+/* FORMULARIO PLAN, encabezado de pagon para impresión */
+
+#form_pla_encabeza .escroleable{
+	margin:10px;
+}
+
+#form_pla_encabeza{
+	display:none;
+	width:60vw;
+	min-width:700px;
+	height:450px;
+	position:fixed;
+	left:5vw;
+	top:5vh; 
+	border: 2px solid #08afd9;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+    z-index:10;
+    background-color:#fff;
+    overflow-y: auto;
+    cursor:move;
+}
+
+#form_pla_encabeza input, select{
+	width:calc(100% - 70px);
+	background:#ffffff;
+	font-family:'Ropa Sans-local';
+	font-size:12px;
+	color:#08AFD9;
+	margin:0;
+	vertical-align: text-bottom;
+}
+#form_pla_encabeza label{
+	vertical-align: text-bottom;
+	height:auto;
+}
+
+
+#form_pla_encabeza input[type="submit"].general{
+    font-size: 13px;
+    height: 20px;
+    line-height: 13px;
+    width: 60px;
+    position:absolute;
+    top:35px;
+    right:5px;
+}	
+
+#form_pla_encabeza .eliminacion{
+    position:fixed;
+    top:105px;
+    left:650px;
+    width:50;
+    height:50px;
+}	
+
+
+#form_pla_encabeza input.cancela{
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size: 13px;
+    line-height: 13px;
+    width: 60px;
+    height: 20px;
+    line-height: 13px;
+}			
+#form_pla_encabeza input.eliminar{
+    position: absolute;
+    top:90px;
+    right:5px;
+    font-size: 11px;
+    line-height: 13px;
+    width: 60px;
+    height: 15px;
+    line-height: 13px;
+	background-color:red;
+	color:#555;
+	font-weight:bold;
+}
+
+#form_pla_encabeza .dragborde.izquierdo {
+    position: absolute;
+    left: -4px;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    cursor: w-resize;
+    background-color: lightblue;
+    z-index: 20;
+    height: 100%;
+}
+
+
+
+
+
+
+/* FORMULARIO PLAN */
+
+#form_pla{
+	display:none;
+	width:90vw;
+	height:90vh;
+	position:fixed;
+	left:5vw;
+	top:5vh; 
+	border: 2px solid #08afd9;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+    z-index:10;
+    background-color:#fff;
+    overflow-y: auto;
+    cursor:move;
+    
+}
+
+
+
+#form_pla select{
+	width:100%;
+	height:16px;
+}
+
+#form_pla input, select{
+	background:#ffffff;
+	font-family:'Ropa Sans-local';
+	font-size:12px;
+	color:#08AFD9;
+	margin:0;
+	vertical-align: text-bottom;
+}
+#form_pla label{
+	vertical-align: text-bottom;
+	height:auto;
+}
+
+#form_pla input[type="button"]{
+	position:relative;
+}
+ 
+#form_pla input[type="submit"]{
+    font-size: 9px;
+    height: 17px;
+    line-height: 8px;
+    padding: 0;
+    width: 40px;
+    position:absolute;
+    top:35px;
+    right:5px;
+}
+
+
+#form_pla input[type="submit"].general{
+    font-size: 13px;
+    height: 20px;
+    line-height: 13px;
+    width: 60px;
+    position:absolute;
+    top:35px;
+    right:5px;
+}	
+
+#form_pla .eliminacion{
+    position:fixed;
+    top:105px;
+    left:650px;
+    width:50;
+    height:50px;
+}	
+
+
+#form_pla input.cancela{
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size: 13px;
+    line-height: 13px;
+    width: 60px;
+    height: 20px;
+    line-height: 13px;
+}			
+#form_pla input.imprimir{
+    position:absolute;
+    top:65px;
+    right:5px;
+    font-size: 13px;
+    line-height: 13px;
+    width: 60px;
+    height: 20px;
+    line-height: 13px;
+}		
+#form_pla input.eliminar{
+    position: absolute;
+    top:90px;
+    right:5px;
+    font-size: 11px;
+    line-height: 13px;
+    width: 60px;
+    height: 15px;
+    line-height: 13px;
+	background-color:red;
+	color:#555;
+	font-weight:bold;
+}
+
+
+
+
+#form_pla input.subirN{
+    position:absolute;
+    top:135px;
+    right:5px;
+    font-size: 13px;
+    line-height: 13px;
+    width: 60px;
+    height: 20px;
+    line-height: 13px;
+}			
+#form_pla[nivel='PLAn1'] input.subirN{
+    display:none;
+}
+#form_pla input.bajarN{
+    position:absolute;
+    top:160px;
+    right:5px;
+    font-size: 13px;
+    line-height: 13px;
+    width: 60px;
+    height: 20px;
+    line-height: 13px;
+}			
+#form_pla[nivel='PLAn3'] input.bajarN{
+    display:none;
+}
+#form_pla input.moverN{
+    position:absolute;
+    top:110px;
+    right:5px;
+    font-size: 13px;
+    line-height: 13px;
+    width: 60px;
+    height: 20px;
+    line-height: 13px;
+}
+#form_pla[nivel='PLAn1'] input.moverN{
+    display:none;
+}
+
+#form_pla #menumover{
+    position:absolute;
+    top:110px;
+    right:55px;
+    font-size: 13px;
+    line-height: 13px;
+    width: 260px;
+    max-height: 400px;
+    overflow:auto;
+    display:none;
+}
+#form_pla #menumover[activo='si']{
+	display:block;
+}
+#form_pla #menumover a{
+	display:block;
+	color:#000;
+	border:1px #aaa solid;
+	margin:2px;
+}
+#form_pla #menumover a:hover{
+	border:1px #000 solid;
+}
+
+#form_pla #menumover[nivel='PN3'] .componente[nivel='PN1'] > .nombre{
+	display:none;
+}
+
+#form_pla #menumover[nivel='PN2'] .componente[nivel='PN1'] > .nombre{
+	display:none;
+}
+#form_pla #menumover[nivel='PN2'][disponible='1_nivel'] .componente[nivel='PN1'] > .nombre{
+	display:inline-block;
+}
+#form_pla #menumover[nivel='PN2'] .componente[nivel='PN1']{
+	margin-bottom:3px;
+}
+
+#form_pla #menumover .numero{
+	padding:1px;
+	border:1px solid #444;
+	margin:1px;
+	display:inline-block;
+    background-color: rgba(255,255,255,0.5);
+    height: 11px;
+}
+#form_pla #menumover[nivel='PN2'] .componente[nivel='PN1'] > .numero{
+	float:left;
+	width:20px;
+	overflow:hidden;
+	display:inline-block;
+	text-align: center;
+	margin: 4px 0px 4px 3px;
+}
+
+#form_pla #menumover .contenidos{
+	width: calc(100% - 28px);
+	display:inline-block;
+	min-height:0px;
+}
+
+
+#form_pla #menumover[nivel='PN1'] .contenidos{
+	display:none;
+}
+
+
+#form_pla input[type="radio"]{
+    vertical-align:middle;
+}
+
+	
+#form_pla input[readonly='readonly']{	
+	background-color:lightblue;		
+	height:4px;
+}
+
+#form_pla  input[disabled='disabled']{	
+	background-color:lightblue;		
+	height:4px;
+}
+
+ 
+#form_pla input[type="radio"]{
+	display:inline-block;	
+}	
+
+#form_pla .dragborde.izquierdo {
+    position: absolute;
+    left: -4px;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    cursor: w-resize;
+    background-color: lightblue;
+    z-index: 20;
+    height: 100%;
+}
+
+	
+
+
+
+h1{
+	margin:0 10px;
+}
+
+h2, h3{
+	margin:2px 0 0 0;
+}		
+
+h1, h2{
+	width:auto;
+}
+		
+h3{	
+	font-size:10px;
+	font-weight:normal;	
+}
+
+input.fecha{
+	float:none;
+	width:40px;		
+}		
+
+input.chico{
+	width:100%;
+}		
+
+input.mini{
+float:none;
+	width:25px;
+}		
+
+select.chico{
+	width:100px;
+}			
+
+	
+		
+#adjuntos a{
+	border: medium none;
+    color: #e41937;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    width: 160px;
+	max-height: 27px;
+ 	overflow: hidden;
+ 	vertical-align:middle;
+}
+#adjuntos input[type='text']{
+	width: 110px;
+	vertical-align:middle;
+}
+#adjuntos input[type='button']{
+	width: 15px;
+	vertical-align:middle;
+	background-color:#fff;
+}
+#adjuntos input[type='button']:hover{
+	background-color:#faa;
+	font-weight:bold;
+}
+#adjuntos input[type='button'].recuperar{
+	display:none;
+	color:#000;
+	font-weight:bold;
+	background-color:#f00;
+}
+#adjuntos input[type='button'].recuperar:hover{
+	background-color:#0f0;	
+}
+
+#adjuntoslista{
+	margin-top:10px;
+}
+#adjuntoslista h3[eliminar='si'] a{
+	text-decoration: line-through;
+}
+
+#uploader div{
+    border-bottom: 1px solid lightblue;
+    height: auto;
+    margin-top: 2px;
+    width: 123px;
+}
+
+#uploader{
+	position:absolute;
+	right: 2px;
+	top:0px;
+}
+#contenedorlienzo{
+	vertical-align:top;
+	display:block;
+	position:relative;
+	box-shadow:2px 2px 5px 2px rgba(0,0,0,0.5) inset;
+}
+
+
+#editorArchivos #contenedorlienzo{
+	height:60px;
+}
+
+.botoncerrar{
+	position:absolute;
+	right:1vw;
+	top:1vh;
+}
+
+#listadosubiendo > p{
+	display:block;
+	border:1px solid #999;
+	margin:1px;
+	color:#444;
+	background-color:#ccc;
+	height:15px;
+	white-space: nowrap;
+}
+
+#contenedorlienzo #lienzo{
+	vertical-align:top;
+	display:inline-block;
+	position:relative;
+	border:2px solid #aaa;
+}
+#contenedorlienzo #upload{		
+	position:absolute;
+	display:inline-block;
+	border:0px solid #aaa;
+	position:relative;
+	height:100%;
+	width:100%;
+}
+
+#contenedorlienzo #upload label{
+	height:calc(100% - 4px);
+	width:100%;
+	font-size:14px;
+	color:#999;
+	margin:0px;
+	text-align:center;
+	line-height:13px;
+	display: inline-block;
+}
+	
+#contenedorlienzo #uploadinput{
+	opacity:0;
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	display:inline-block;
+}
+		
+
+
+div.encabezado > .numero > .val{
+	font-size: 15px;
+	font-weight: bold;
+	display:inline-block;
+	margin:1px;
+	padding: 1px 5px;
+	border:1px solid rgba(100,100,100,0.8);
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.aux.num{
+	display:none;
+}
+
+.PLAn1{
+	
+}
+.PLAn1 div{
+	
+}
+.PLAn2 {
+	
+}
+	
+a[disabled='disabled']{
+	color:silver;
+}
+.listaestados{
+	font-weight: normal;
+}
+#form_pla h2{
+	font-size:13px;
+}
+#form_pla h2{
+	font-size:13px;
+}
+#form_pla input{
+	width:unset;
+}
+#form_pla input[name='nombre'] {
+    width: 290px;
+ }
+ 	#form_pla input[name='responsable'] {
+    width: 190px;
+ }
+#form_pla input[type='color'] {
+    width: 15px;
+    padding: 0px;
+    height: 15px;
+ }
+#form_pla .escroleable {
+    width: 99%;
+    margin: 10px;
+    position: relative;		
+}
+
+
+#form_pla .paquete {
+
+    width: 300px;
+    margin-bottom: 5px;
+    border: 1px gray solid;
+    padding: 5px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    overflow: visible;
+
+}
+
+#form_pla .paquete.desarrollo{		
+    width: 616px;		
+}
+
+#form_pla .sugerencia a {
+
+    display: inline-block;
+    background-color: #fff;
+    margin: 1px;
+    width: 48%;
+    height: 14px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+#form_pla .sugerencia.dos{
+    display: none;
+}
+
+
+#form_pla #listaestados .estado div{
+	display:inline-block;
+	width: 84px;
+	text-align: center;			
+	
+	vertical-align:middle;
+}
+
+#form_pla #listaestados .estado a{
+	width: 70px;
+	display: inline-block;
+	text-align: center;
+	
+	vertical-align:middle;
+}
+#form_pla #adjuntoslista input.eliminar{
+	position: relative;
+	top: unset;
+	right: unset;
+	width: 12px;
+	min-width: 0px;
+	display: inline-block;
+	padding: 0px;
+}
+#form_pla #adjuntoslista input.recuperar{
+	position: relative;
+	top: unset;
+	right: unset;
+	width: 12px;
+	min-width: 0px;
+	padding: 0px;
+}
+
+#form_pla #tiposcategorias{
+	display:none;
+	position:absolute;
+	top:20px;
+	left:70px;
+	z-index:200;
+	border:1px solid #aaa;
+	background-color:#fff;
+	width:450px;
+}
+#form_pla #tiposcategorias a{
+	display:block;
+}
+#form_pla #tiposcategorias #opciones{
+	width: 250px;
+	display: inline-block;
+	vertical-align:top;
+}	
+#form_pla #tiposcategorias #descripcion{
+	width:196px;
+	display: inline-block;
+	vertical-align:top;
+}	
+
+#form_pla #nombrecategoria{
+	display:none;
+	position:absolute;
+	top:20px;
+	left:70px;
+	z-index:200;
+	border:1px solid #aaa;
+	background-color:#fff;
+	width:150px;
+}
+	
+#form_pla input{
+	vertical-align:middle;
+}
+
+#form_pla input[name='estado']{
+	width:80px;
+	text-align:center;
+}
+#form_pla .adjuntos{
+	width: 287px;			
+	margin-bottom: 5px;			
+	border: 1px gray solid;			
+	padding: 5px;			
+	position: relative;			
+	display: inline-block;			
+	vertical-align: top;			
+	font-size: 12px;			
+	overflow: visible;
+}
+div.encabezado > .decripcion{
+	overflow:hidden;
+}
+
+div.encabezado > .documentos > a{
+	display:block;
+	color:#000;
+	margin:5px;
+	border:1px solid #444;
+	text-align:center;
+}
+
+div.encabezado > .documentos > a:hover{
+	background-color:#fff;
+}
+div.encabezado > .documentos > a > img{
+	max-height:120px;
+	max-width:181px;
+}
+
+div.encabezado .estado .listaestados{
+	padding-left: 25px;
+	font-size:12px;
+}
+
+div.encabezado .estado .listaestados ul{
+	padding-left: 25px;
+	font-size:1px;
+}
+
+div.encabezado .estado .listaestados span.estnombre{
+	display: inline-block;
+	width: 83px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.1);
+	margin: 1px 2px;
+}
+div.encabezado .estado .listaestados span.desde{
+	font-size:9px;
+}
+
+div.encabezado > .categoria{
+	
+	display:block;
+}
+div.encabezado > .categoria > label{
+	font-weight:bold;
+	display:inline-block;
+	width:150px;
+	text-align:rigth;
+}
+div.encabezado > .categoria > .categoriavalor{
+	margin-left:10px;
+}
+	 
+div[editada='si']{
+    box-shadow:2px 2px 20px 20px rgba(8, 175, 217, 0) inset;
+    animation-name: example;
+    animation-duration: 2s;
+}
+
+/* Standard syntax */
+@keyframes example {
+	0%   {box-shadow:2px 2px 20px 20px rgba(8, 175, 217, 0) inset;}
+    5%  {box-shadow:2px 2px 20px 20px rgba(8, 175, 217, 1) inset;}
+    70%  {box-shadow:2px 2px 20px 20px rgba(8, 175, 217, 0.5) inset;}
+    100% {box-shadow:2px 2px 20px 20px rgba(8, 175, 217, 0) inset;}
+}
+
+
+
+
+a#botongestion, a#botonfichas, a#botontabla, a#botoncronograma, a#botontexto{
+	position:relative;
+	display:inline-block;
+	margin:5px;
+	margin-right:10px;
+	padding: 0px 3px;
+    border: 1px solid #08afd9;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    font-size: 12px;
+    text-align: center;
+}
+
+a#botongestion:hover, a#botonfichas:hover, a#botontabla:hover a#botoncronograma:hover{
+    background-color: #08afd9;
+}
+
+#page[modo='gestion'] a#botongestion{
+	color:silver
+}
+#page[modo='gestion'] a#botongestion:hover{
+	color:silver
+	background-color:#fff;
+}  
+
+
+
+
+
+
+#page[modo='fichas'] a#botonfichas{
+	color:silver
+}
+#page[modo='fichas'] a#botonfichas:hover{
+	color:silver
+	background-color:#fff;
+}  
+#page[modo='fichas'] .ficha{
+	display:inline-block;
+	box-shadow: 4px 4px 20px rgba(0,0,0,0.8);
+	margin:5px;
+}
+#page[modo='fichas'] a[disabled='disabled']{
+	color:silver;
+}
+#page[modo='fichas'] div.tx{
+	text-align:justify;
+}
+#page[modo='fichas'] div.descripcion{
+	text-align:justify;
+}
+#page[modo='fichas'] .portafoto img{
+	max-width: 90%;
+    max-height: 90%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#page[modo='fichas'] #contenidos{
+	text-align:center;
+	background-color:#fff;
+}
+
+
+#page[modo='fichas'] .cronograma{
+	display:block;
+	border-top:1px solid #000;
+}
+
+	
+#page[modo='fichas'] .cronograma .contenido{
+	display:inline-block;
+	margin-top:5px;
+}
+
+#page[modo='fichas'] .cronograma .contenido .mes{
+	display:inline-block;
+	border-bottom:1px solid #000;
+	vertical-align:top;
+}
+#page[modo='fichas'] .cronograma .contenido .mes .eti{
+	display:block;
+	height:10px;	
+	line-height: 10px;	
+}
+#page[modo='fichas'] .cronograma .contenido .mes .barra{
+	display:block;
+	height:10px;		
+	background-color:#fff;
+	border-left:1px solid #000;
+}		
+#page[modo='fichas'] .cronograma .contenido .mes .barra[estado='activa']{
+	background-color:red;
+}			
+#page[modo='tabla'] a#botontabla{
+	color:silver
+}
+#page[modo='tabla'] a#botontabla:hover{
+	color:silver
+	background-color:#fff;
+}  
+
+#page[modo='tabla'] table{
+    border-collapse: collapse;
+    width: 700px;
+	margin: 0 auto;
+	border: 3px solid #000;
+} 
+#page[modo='tabla'] td{
+	min-width:10px;
+}
+#page[modo='tabla'] .nivel1{
+}
+#page[modo='tabla'] tr.nivel1{
+	display:table-row;
+	border-top: 5px solid #000;
+}
+#page[modo='tabla'] tr[nivel='PLAn2']{
+	display:table-row;
+	border-top: 2px solid #000;
+}	
+#page[modo='tabla'] tr.nivel3{
+	display:table-row;
+}		
+#page[modo='tabla'] tr[nivel='PLAn1']{
+	border-top: 5px solid #000;
+}
+
+#page[modo='tabla'] td.numero{
+	font-size:25px;
+	text-align:center;
+}
+#page[modo='tabla'] td.numero:hover{
+	background-color:#08afd9;
+}
+#page[modo='tabla'] td.nombre:hover{
+	background-color:#08afd9;
+}				
+#page[modo='tabla'] td.descripcion{
+	font-size:10px;
+}
+#page[modo='tabla'] td.estados {
+	font-size:10px;
+}
+#page[modo='tabla'] td.responsable{
+	font-size:10px;
+}
+#page[modo='tabla'] ul{
+	padding-left:15px;
+}
+#page[modo='tabla'] li{
+	padding-left:2px;
+	text-indent: -5px;
+}
+#page[modo='tabla'] tr.nivel1 .nombre{
+	font-size:25px;
+}
+#page[modo='tabla'] tr.nivel3 .nombre > a{
+	display:block;
+}	
+#page[modo='tabla'] .nom{
+	font-size:11px;
+	display:block;
+}
+
+
+.PLAn1[filtroB='nover'], .PLAn2[filtroB='nover'], .PLAn3[filtroB='nover']{
+	display:none;
+}
+
+page[modo="fichas"] .ficha[filtroB='nover']{
+	display:none;
+}
+
+
+#page[modo='cronograma'] table{
+    border-collapse: collapse;
+    width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid #000;
+} 
+
+#page[modo='cronograma'] tr.nivel1{
+	display:table-row;
+	border-top: 5px solid #000;
+}
+#page[modo='cronograma'] tr[nivel='PLAn2']{
+	display:table-row;
+	border-top: 2px solid #000;
+	background-color:#ccc;
+}	
+#page[modo='cronograma'] tr.nivel3{
+	display:table-row;
+}		
+#page[modo='cronograma'] tr[nivel='PLAn1']{
+	border-top: 5px solid #000;
+	background-color:#aaa;
+}
+	
+#page[modo='cronograma'] td.numero{
+	font-size:25px;
+	text-align:center;
+}	
+#page[modo='cronograma'] td.descripcion{
+	font-size:10px;
+}
+#page[modo='cronograma'] td.estados {
+	font-size:10px;
+}
+#page[modo='cronograma'] td.responsable{
+	font-size:10px;
+}
+#page[modo='cronograma'] ul{
+	padding-left:15px;
+}
+#page[modo='cronograma'] li{
+	padding-left:2px;
+	text-indent: -5px;
+}
+
+
+
+#page[modo='cronograma'] .nombreplan2{
+	font-size:11px;
+	display:block;
+	height: 22px;
+	overflow: hidden;
+	font-weight:normal;
+}
+
+#page[modo='cronograma'] .nom{
+	font-size:11px;
+	display:block;
+}
+
+#page[modo='cronograma'] tr[nivel='PLAn1'] .nombre{
+	font-size:20px;
+}
+#page[modo='cronograma'] tr[nivel='PLAn2']{
+	border-top: 4px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+#page[modo='cronograma'] tr[nivel='PLAn2'] .numero{
+	font-size:20px;
+	line-height: 17px;
+}
+#page[modo='cronograma'] tr[nivel='PLAn3'] .nombre > a{
+	
+	display:block;
+	font-size:16px;
+}	
+
+#page[modo='cronograma'] tr[nivel='PLAn3'] .numero{
+	font-size:14px;
+	line-height: 11px;
+}
+#page[modo='cronograma'] a#botoncronograma{
+	color:silver
+}
+#page[modo='cronograma'] a#botoncronograma:hover{
+	color:silver
+	background-color:#fff;
+}  
+#page[modo='cronograma'] .contienemeses{
+	display:inline-block;
+	width:580px;	
+}
+
+#page[modo='cronograma'] tr[nivel='PLAn1'] .mes{
+	height: 41px;
+}
+
+#page[modo='cronograma'] .mes{
+	display:inline-block;
+	height: 38px;
+	vertical-align: top;
+}
+
+#page[modo='cronograma'] .barra{
+	display:inline-block;
+	vertical-align:middle;
+	height:24px;
+}
+
+#page[modo='cronograma'] .barra[estado='activa']{
+	background-color:#6c5050;
+}		
+
+#page[modo='cronograma'] #plan #descripcion{
+	display:none;
+}	
+
+#page[modo='cronograma'] h2{
+	width:100%;
+	font-size:20px;
+	margin-top:10px;
+	margin-bottom	:10px;
+	text-align:center;
+}			
+
+
+#page[modo='texto'] p img{
+	max-width:200%;
+	max-height:100px;
+	font-size:display:nline-block;
+}			

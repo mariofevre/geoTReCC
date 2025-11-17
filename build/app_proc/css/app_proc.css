@@ -1,0 +1,622 @@
+#page .mapa {
+    position: relative;
+    width: 600px;
+    height: 601px;
+    left: 0px;
+}
+
+#page .portamapa {
+    display:inline-block;
+    vertical-align:top;
+    border:none;
+}
+
+#page .cuadroaplicacion{
+    display:inline-block;
+    vertical-align:top;
+    width: 40%;
+}
+
+.capaEncabezadoCuadro{
+    border-top: 3px solid #CDF0F9;
+    display: inline-block;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.capaEncabezadoCuadro h1{
+    font-size: 23px;
+}
+
+
+
+#divSeleccionProcActivos[contenido='vacio']{
+	display:none;
+}
+
+#formProcActivo{
+	position:relative;
+}
+
+#formProcActivo #componentes .componente{
+	position:relative;
+}
+
+#formProcActivo #componentes .componente span{
+	display:inline-block;
+	border:1px solid #000;
+	margin: 1px;
+	padding:0;
+	overflow:hidden;
+}
+#formProcActivo #componentes .componente > span{
+	height:28px;
+}
+
+#formProcActivo #componentes .tipo{
+	width:25px;
+}
+#formProcActivo #componentes .idlocal{
+	width:25px;
+	font-size:14px;
+}
+
+#formProcActivo #componentes .nombre{
+	width:220px;
+}
+
+#formProcActivo #componentes .estado{
+	width:30px;
+	text-align:right;
+	position:relative;
+	width: 40px;
+}
+#formProcActivo #componentes .estado[estado='vinculado']{
+	background-color:#aaffbb;
+	color:#00aa44;
+}
+#formProcActivo #componentes .estado[estado='vinculadoparcial']{
+	background-color:#ffffbb;
+	color:#aaaa44;
+}
+#formProcActivo #componentes .campos{
+	width:40px;
+}
+#formProcActivo #componentes .campos span{
+	display:inline;
+	border:none;
+	margin: 0px;
+	padding:0px;
+}
+#formProcActivo #componentes .campo span{
+	border-color:#999;
+}
+#formProcActivo #componentes .campos[estado='listo']{
+	background-color:#aaffbb;
+	color:#00aa44;
+}
+
+
+#formProcActivo #componentes #idcapa{
+	border:none;
+	text-align:right;
+}
+
+
+#formProcActivo #componentes .botonDescargaCapa{
+	width: 10px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	margin: 0;
+}
+#formProcActivo #componentes .botonDescargaCapa img{
+	width: 10px;
+}
+
+#formProcActivo #componentes .botonDescargaCapa{
+	width: 10px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	margin: 0;
+}
+
+
+
+
+
+#formProcActivo .procesandocomponente{
+	display:none;
+	width:10px;
+}
+
+
+#formProcActivo[estado='procesando'] .procesandocomponente{
+	display:inline-block;
+}
+
+#formProcActivo img#procesando{
+	display:none;
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+
+#formProcActivo[estado='procesando'] img#procesando{
+	display:inline-block;
+}
+
+
+#formProcActivo #componentes .campo{
+	height:0px;
+	margin:0px;
+	margin-left:30px;
+	transition: height 1s;
+	transition: margin 1s;
+	overflow:hidden;
+}
+
+#formProcActivo #componentes .componente[abierto='1'] .campo{
+	height:auto;
+}
+
+
+#formProcActivo #componentes .componente .desvincula{
+	display:none;
+	position:absolute;
+	top:40px;
+	border:1px solid red;
+	color:red;
+	right:12px;
+}
+
+#formProcActivo #componentes .componente[abierto='1'] .desvincula{
+	display:block;
+}
+
+#formProcActivo #componentes .campo #nombrecampo{
+	width:160px;
+}
+#formProcActivo #componentes .campo #linkcampo{
+	width:160px;
+}
+#formProcActivo #componentes .campo select[guarda='guardando']{
+	background-color:pink;
+	color:red;
+}
+#formProcActivo #componentes .campo select[guarda='guardado']{
+	background-color:#aaffbb;
+	color:#00aa44;
+}
+
+#formProcActivo #componentes .proceso[estado='inviable'] #img_off{
+	display:inline-block;
+}
+
+#formProcActivo #componentes .proceso[estado='inviable'] #img_on{
+	display:none;
+}
+
+#formProcActivo #componentes .proceso[estado='viable'] #img_off{
+	display:none;
+}
+
+#formProcActivo #componentes .proceso[estado='viable'] #img_on{
+	display:inline-block;
+}
+
+#formProcActivo #componentes a.proceso[estado='inviable']{
+	cursor:pointer;
+	margin:0px;
+}
+
+
+#formProcActivo #componentes a.proceso[estado='inviable']:hover{
+	background-color:#fff;
+}
+
+#formProcActivo #componentes a.proceso[estado='inviable']:hover img{
+	background-color:#fff;
+}
+
+body > .reporte{
+	position:fixed;
+	top:50px;
+	left:50px;
+	border:1px solid #08afd9;
+	box-shadow:5px 5px 10px rgba(0,0,0,150);
+	background-color:#fff;
+	z-index:10000;
+}
+body > .reporte .cerrar{
+	position:absolute;
+	top:2px;
+	right:2px;
+	border:1px solid #08afd9;
+}
+
+
+
+.formSeleccionCapa{
+    position:relative;
+    display:none;
+}
+
+.filaCapaLista{
+    width: 100%;
+    margin-bottom:2px;
+    padding-bottom:2px;
+    border-bottom:1px solid rgba(150,150,150);
+}
+
+#capaIdLista{
+    position:relative;
+    display:inline-block;
+    width: 10%;
+    vertical-align:middle;
+}
+#capaIdLista .idn{
+	font-size:150%;
+	font-weight: bold;
+	vertical-align:middle;
+}
+#capaNombreLista{
+    position:relative;
+    display:inline-block;
+    width: 25%;
+    vertical-align:middle;
+}
+#capaDescripcionLista{
+    position:relative;
+    display:inline-block;
+    width: 65%;
+    vertical-align:middle;
+}
+#capaAutoriaLista{
+    position:absolute;
+    bottom:1px;
+    right:0px;
+    font-style:italic;
+    font-size:9px;
+    background-color:#fff;
+    line-height: 6px;
+
+}
+a.filaCapaLista:hover #capaAutoriaLista{
+    background-color:transparent;
+}
+
+.filaCapaLista[filtrado='si']{
+	display:none;
+}
+.filaCapaLista[filtrado='si'][cargado='si']{
+	display:block;
+}
+
+input[type="number"]{
+	width:50px;
+	margin:0;
+	border:none;
+	height:15px;
+	text-align:right;
+}
+input[type="color"]{
+	width:20px;
+	padding:0;
+	margin:0;
+	border:none;
+}
+
+#simbologia input[type="text"]{
+	width:80px;
+	margin-left:5px;
+	margin-right:5px;
+	border:none;
+	height:18px;
+}
+#simbologia label{
+	display:inline-block;
+	font-size:12px;
+	width:auto;
+}
+#simbologia label.l1{
+	margin-left:10px;
+	width:80px;
+	text-align:right;
+}
+#simbologia label.l2{
+	margin-left:5px;
+	width:126px;
+	text-align:right;
+}
+
+#simbologia div[name='rule'] h3{
+	display:inline-block;
+}
+
+#simbologia div[name='rule']{
+	border-bottom: 1px solid #000;
+	margin-left:10px;
+	margin-top: 3px;
+	position:relative;
+}
+
+#simbologia .condicion label{
+	width:20px;
+	text-align:right;	
+}
+
+input[type="range"]{
+	width:40px;
+	margin:0;
+	border:none;
+	height:10px;
+}
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 5px; /* Set a specific slider handle width */
+    height: 5px; /* Slider handle height */
+    background: #ccc; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 5px; /* Set a specific slider handle width */
+    height: 5px; /* Slider handle height */
+    background: #ccc; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+input[type="range"]#inputtransparenciarellenoRange{
+	width:49px;
+}
+
+div[name="rule"] .contienecolor{
+	display:inline-block;
+	margin:10px;
+	
+}
+div[name="rule"] .contienecolor ::-moz-color-swatch {
+    border-color: transparent;
+   
+}
+div[name="rule"] .contienecolor input{
+	width: 15px;
+	height:15px;
+}
+
+div[name="rule"] input[type="color"]#inputcolortrazo{
+	width:9px;
+	height:9px;
+	border-color: transparent;
+	margin:1px;
+}
+
+div[name="rule"] input[type="color"]#inputcolortrazo::-moz-color-swatch{
+	border-color: transparent;
+}
+
+div[name="rule"] input#inputanchotrazoNumber{
+	border:none;
+	height:10px;
+	width:14px;
+	font-size:10px;
+	text-align:right;
+}
+div[name="rule"] input#inputtransparenciarellenoNumber{
+	border:none;
+	height:10px;
+	width:17px;
+	text-align:right;
+	font-size:10px;
+}
+
+div[name="rule"] .contienecolor{
+	float:left;
+}
+div[name="rule"] .grupoborde{
+	display:block;
+}
+div[name="rule"] .gruporelleno{
+	display:block;
+}
+div[name="rule"] .simbolo{
+	display:inline-block;
+	width:120px;
+	vertical-align:middle;
+}
+div[name="rule"] #eliminarRegla{
+	color:red;
+	position:absolute;
+	top:20px;
+	left:2px;
+}
+div[name="rule"] .condicion{
+	display:inline-block;
+	vertical-align:middle;
+}
+div[name="rule"] .identificacion{
+	display:inline-block;
+	width:139px;
+	vertical-align:middle;
+}
+div[name="rule"] select{
+	float:left;
+}
+
+#barrabusqueda{
+	box-shadow:2px 2px 4px rgba(0,0,0,0.5);
+	display:inline-block;
+	width: calc(100% - 10px);
+	max-width:400px;
+	height:20px;
+	position:relative;
+	margin-bottom: 10px;
+}
+div#barrabusqueda:hover{
+	box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+}
+
+#barrabusqueda input{
+	width:100%;
+	border:none;
+	margin:0;
+	padding:0;
+	height: 100%;
+}
+#barrabusqueda a{
+	right:2px;
+	top:2px;
+	height:10px;
+	position:absolute;
+	color:#E41937;
+	background-color:#fff;
+	border: 1px solid #E41937;
+	border-radius: 3px;
+	display:none;
+} 
+
+#barrabusqueda[estado='activo'] a{
+	display:block;
+}
+
+#barrabusqueda input{
+	color:#aaa;
+} 
+
+#barrabusqueda[estado='activo'] input{
+	color:#08afd9;
+} 
+		
+#barrabusqueda a:hover{
+	background-color:#E41937;			
+} 
+
+select, option, input[type='button']{
+    text-align:center;
+    padding:0px;
+    cursor: pointer;
+    height:16px;  
+    vertical-align:middle;
+    margin:1px 2px;
+    border-radius:4px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+    line-height:10px;
+    font-size:inherit;
+    font-family:inherit;    
+    color:inherit;
+}
+select{
+	width: 60px;
+}
+input[type='button']{
+	width:85px;
+}
+input[type='button']:hover{
+	background-color: #C8E9D7;
+}
+
+#archivosacargar #uploadinput{
+	left: 0px;
+	width: 190px;
+	height: 40px;
+}
+
+
+#camposident  div>div{
+	display:inline-block;
+	width:80px;
+	font-size:12px;
+	word-wrap: break-word;
+}
+
+#ecamposdelosarchivos[archivocargado='no']{
+	display:none;
+}
+
+#ecamposdelosarchivos #tituloscampos p{
+	display:inline-block;
+	width: 120px;
+	text-align: center;
+}
+#ecamposdelosarchivos #tituloscampos p#titulocampo{
+	width: 40px;
+}
+
+#ecamposdelosarchivos  div input{
+	height:16px;
+	margin-bottom:0;
+}
+
+#ecamposdelosarchivos  .enshp{
+		display:inline-block;
+		width:160px;
+		border:1px solid #04586c;
+		margin:0px;
+		background-color:rgba(173, 216, 230, 0.5);
+		cursor:move;
+		overflow:hidden;
+		vertical-align: middle;
+		box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+		
+	}
+#ecamposdelosarchivos  #espacioshp{
+	display:inline-block;
+	width:162px;
+	height:16px;
+	border:1px dashed #aaa;
+	margin:0px;
+	overflow:hidden;
+	vertical-align: middle;
+	
+}
+#camposident  > div{
+	height:20px;
+}
+#titulodesechar{
+	text-align:right;
+	padding-right:10px;
+	margin-top:20px;
+}
+#camposdesecha > div{
+	text-align:right;
+	margin-right:10px;
+	
+}
+
+#verproccampo{
+	display:none;
+}
+
+select[name="tipogeometria"]{
+	width: 80px;
+	font-size: 12px;
+}
+#vinculaciones{
+	display:block;
+	width: 400px;
+}
+.formlink{
+	display:none;
+	position:fixed;
+	top:calc(50vh - 50px);
+	left:calc(50vw - 100px);
+	height:100px;
+	width:200px;
+	overflow-y:scroll;
+	border:2px solid #000;
+	box-shadow:5px 5px 10px rgba(0,0,0,0.8);
+	background-color:#fff;
+}
+.formlink #cerrar{ 
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.formlink a{ 
+	display:block;
+}

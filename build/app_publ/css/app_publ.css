@@ -1,0 +1,341 @@
+mapa{
+  width: 600px;
+}
+
+#botonCrearGeom{
+	display:none;
+}
+
+#tipodeometriaNuevaGeometria{
+	display:none;
+}
+
+.unidad input.renombra {
+	border:none;
+	width:200px;
+	font-size:11px;
+	font-weight:bold;
+	color:#000;
+	cursor:pointer;
+}
+
+.unidad input.renombra[editando='si'] {
+	color:red;
+	background-color:pink;
+}
+
+#barrabusqueda input {
+    color: #aaa;
+}
+#barrabusqueda[estado='activo'] input {
+    color: #000;
+}
+
+#barrabusqueda {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    display: inline-block;
+    width: calc(100% - 10px);
+    max-width: 400px;
+    height: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+#barrabusqueda input {
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+input:hover {
+		background-color: #CEF6F5;
+}
+
+
+.elementoCarga h1 {
+    font-size: 20px;
+}	
+
+#titulo.elementoCarga input,
+#Autoria input,
+#Url.elementoCarga input{
+    width: calc(100% - 10px);
+}
+
+#publAnio{
+	width:50px;
+}
+#publMes{
+	width:30px;
+}
+#formEditarPublicaciones[modo='off']{
+	display:none;
+}
+
+#contenedorlienzo{
+	vertical-align:top;
+	box-shadow:2px 2px 5px 2px rgba(0,0,0,0.5) inset;
+    display:inline-block;
+}
+
+#gestorarchivos{
+	height:auto;
+	width:120px;
+	position:absolute;
+	right:0px;
+	bottom: 5px;
+}
+
+#gestorarchivos #documento{
+	color:#08afd9;
+	cursor:pointer;	
+}	
+#gestorarchivos #documento:hover{
+	color:#fff;
+	background-color:#08afd9;	
+	
+}		
+
+#gestorarchivos #contenedorlienzo{
+	height:30px;
+    display:inline-block;
+}
+
+.botoncerrar{
+	position:absolute;
+	right:1vw;
+	top:1vh;
+}
+
+#gestorarchivos #uploader{
+	width:120px;
+	margin:0px;
+	display:none;
+}
+#contenedorlienzo #lienzo{
+	vertical-align:top;
+	display:inline-block;
+	position:relative;
+	border:2px solid #aaa;
+}
+#contenedorlienzo #upload{		
+	position:absolute;
+	display:inline-block;
+	border:0px solid #aaa;
+	position:relative;
+	height:30px;
+	width:120px;
+}
+
+#contenedorlienzo #upload label{
+	height:calc(100% - 4px);
+	width:calc(100% - 5px);
+	font-size:15px;
+	color:#999;
+	margin:5px;
+	text-align:center;
+	line-height:10px;
+	display: inline-block;
+}
+	
+#contenedorlienzo #uploadinput{
+	opacity:0;
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	display:inline-block;
+}
+#contenedorlienzo #uploadinputlink{
+	opacity:0;
+	position:absolute;
+	top:0;
+	left:0;
+    height:calc(100% - 4px);
+	width:calc(100% - 5px);
+	font-size:15px;
+	color:#999;
+	margin:5px;
+	text-align:center;
+	line-height:10px;
+	display: inline-block;
+}
+#listadoDocumentos{
+    width: 300px;
+    position: absolute;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    display:none;
+    z-index: 20;
+	box-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+	max-height: 320px;
+	overflow-y: auto;
+}
+#listadoDocumentos .item[zz_sis="Publ"]{
+	display:none;
+}
+#listadodepartamentos > a{
+	display:block;
+	color:red;
+	background-color:pink;
+
+}
+#listadodepartamentos > a:hover{
+	display:block;
+	color:#000;
+	background-color:orange;
+}
+#listadodepartamentos{
+	max-height:100px;
+	overflow:auto;
+}
+
+
+#departamentos label{
+	width:auto;
+}
+
+
+#listadodepartamentos a[filtrado='si']{
+	display:none;
+}
+
+#listadodepartamentosSelectos div{
+	font-size:14px;
+	display:block;			
+}
+
+#listadodepartamentosSelectos div a{
+	width:20px;
+	text-align:center;
+}
+
+#listapublicaciones a{
+	display:block;
+	border: 1px solid #08afd9;
+	margin-top:2px;
+	margin-bottom:2px;
+	height:26px;
+	overflow:hidden;
+	padding-left:4px;
+	padding-right:4px;
+	
+}
+#listapublicaciones a[estado='selecto']{
+	margin:1px;
+	border: 1px solid rgba(50,200,90,1);
+	color:rgba(0,100,50,1);
+	background-color:rgba(50,200,90,0.5);
+}
+#listapublicaciones a[filtrob='nover']{
+	display:none;
+}
+
+
+#formCargaPubl{
+	display:none;
+}
+#cuadrovalores[formCargaPubl='si'] #formCargaPubl{
+	display:block;
+}
+#formEditarPublicaciones{
+	display:none;
+}
+#cuadrovalores[formEditarPublicaciones='si'] #formEditarPublicaciones{
+	display:block;
+}
+#divSeleccionPubl{
+	display:none;
+}
+#cuadrovalores[divSeleccionPubl='si'] #divSeleccionPubl{
+	display:block;
+}
+
+
+
+#listadodepartamentos a{
+	margin:1px;
+}
+
+
+
+#listadodepartamentos a .nom{
+	display:inline-block;
+	width:100px;
+}
+
+#botonCancelar{
+	position:absolute;
+	top:0px;
+	right:25px;
+}
+
+#botonEditar{
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+
+
+#formEditarPublicaciones[modo='off']{
+	display:none;
+}
+
+#formEditarPublicaciones[modo='vista'] #botonEditar{
+	display:inline-block;			
+}
+#formEditarPublicaciones[modo='vista'] #botonEliminar{
+	display:none;			
+}
+#formEditarPublicaciones[modo='vista'] #botonGuardar{
+	display:none;			
+}
+#formEditarPublicaciones[modo='vista'] input{
+	border:none;		
+	display:inline-block;	
+}
+#formEditarPublicaciones[modo='vista'] h1{
+	display:inline-block;
+}
+
+#formEditarPublicaciones[modo='vista'] #selectorDepartamentos{
+	display:none;
+}
+#formEditarPublicaciones[modo='vista'] #listadodepartamentosSelectos a{
+	display:none;
+}
+
+#formEditarPublicaciones[modo='vista'] #dibujarArea{
+	display:none;
+}
+
+#formEditarPublicaciones[modo='vista'] #gestorarchivos #edicion{
+	display:none;
+}
+
+#formEditarPublicaciones[modo='vista'] #Url.elementoCarga input {
+    cursor:pointer;
+}
+
+#formEditarPublicaciones textarea {
+	width: 100%;
+	height:50px;
+	font-size: 11px;
+}
+#selectorDepartamentos{
+	width:250px;
+}
+
+#titulomapa{
+	position: absolute;
+	z-index: 2000;
+	top: 5px;
+}
+#mapa{
+	width:600px;
+}
+#menuacciones {
+  top: 92;
+}

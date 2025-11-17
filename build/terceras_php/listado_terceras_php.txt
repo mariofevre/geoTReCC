@@ -1,0 +1,6 @@
+bootstrap-5.2.0
+DXFcreator
+phppgadmin
+php-shapefile.v4.0
+popper-2.11.5
+simplexlsx

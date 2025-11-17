@@ -1,0 +1,246 @@
+p{
+	margin:0 10px;
+}
+
+h1{
+	margin:0 10px;
+	font-size: 25px;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0 0 0 10px;
+}		
+
+a.boton_celeste{
+	border: 1px solid #08afd9;
+	margin:2px;
+	box-shadow: 2px 2px 1px rgba(0,0,0,0.8);
+	display: inline-block;
+	cursor: pointer;
+	font-size: 12px;
+	position: relative;
+	min-height: 15px;
+	vertical-align: middle;
+	padding: 0px 2px;
+}	
+
+a.boton_rojo{
+	color: red;
+	border: 1px solid red;
+	margin: 2px;
+	box-shadow: 2px 2px 1px rgba(0,0,0,0.8);
+	display: inline-block;
+	cursor: pointer;
+	font-size: 12px;
+	position: relative;
+}
+
+a.boton_gris{
+	border: 1px solid grey;
+	color: grey;
+	margin: 2px;
+	box-shadow: 2px 2px 1px rgba(0,0,0,0.8);
+	display: inline-block;
+	cursor: pointer;
+	font-size: 12px;
+	position: relative;
+}
+		
+#page > div#encabezado{
+	display:inline-block;
+	width:40%;
+    font-size: 11px;
+    position: relative;
+	vertical-align: top;
+}
+
+#page > div#encabezado img{
+	max-height: 50px;
+	margin: 2px;
+}
+
+/*#page > div {
+    font-size: 11px;
+    position: relative;
+}*/
+
+#encabezado a#encabezado{
+	text-shadow: 1px 1px #08afd9;
+	margin:2px;
+	border:none;
+	display:none;
+	height: 34px;
+	overflow: hidden;
+}
+
+#encabezado #elemento{
+	height: 56px;
+	overflow: hidden;
+}
+#encabezado #elemento #titulo{
+	height: 16px;
+	overflow: hidden;
+}
+
+body[display_autonomo="1"] #encabezado a#encabezado{
+	display:none;
+}
+body[display_autonomo="0"] #encabezado a#encabezado{
+	display:inline-block;
+}
+
+
+#encabezado a#encabezado > h2{	
+	display: inline-block;
+	width: 90px;
+	font-size:32px;
+	color:#000;
+}
+#encabezado a#encabezado > p{	
+	display: inline-block;
+	width: 190px;
+	font-size:12px;
+	color:#000;
+}
+#page #portamapa {
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+}
+    
+    
+    
+#portamapa #auxiliar{
+	width: calc(50% - 10px);
+	display:inline-block;
+	vertical-align:top;
+}
+#portamapa #tarjertas{
+	width: calc(50% - 10px);
+	display:inline-block;
+	vertical-align:top;
+}
+
+
+#portamapa{    
+    max-height:calc(100% - 70px);
+}
+
+#mapa {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height:100%;
+    left: 0px;
+    border-left: none;
+    border-right: none;
+    border-top: #000 2px solid;
+    border-bottom: #000 2px solid;
+    border-right: #000 2px solid;
+}
+
+#menuacciones{
+	bottom:0px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: auto;
+}
+
+#page div#cuadrovalores {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    height: calc(100% - 70px);
+}
+
+#page div#menutablas{
+	display:inline-block;
+	width:calc(60% - 5px);
+	position: relative;
+}
+
+.alerta{
+background-color:red;
+}
+			
+form button{
+	min-width:160px;
+	padding:0px;
+}
+#cuadrovalores button{
+	min-width:160px;
+	padding:0px;
+}
+
+@media screen and (orientation:portrait) {
+#page #navegador > div#home{
+		display:block !important;
+	}
+}
+
+/**
+ * Tooltip Styles
+ */
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  margin-bottom: 1px;
+  margin-left: -80px;
+  padding: 1px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}

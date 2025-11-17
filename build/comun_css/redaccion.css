@@ -1,0 +1,32 @@
+.fila > .variable{
+	text-align:right;
+	width:100px;
+}
+
+.fila > .descripcion, .dato.descripcion{
+	width:600px;
+}
+
+.fila > .nombre{
+	text-align:right;
+	width:50px;
+}
+
+.preliminar{
+	color:gray;
+}
+
+.defecto{
+	color:#b44;
+}
+h1{
+    background-color: lightblue;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000
+ }
+ 
+h2 {
+    border-top: 1px solid #000;
+    font-size: 15px;
+    margin-top: 20px;
+}

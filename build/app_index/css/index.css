@@ -1,0 +1,486 @@
+/*
+* geogecindex.css
+*
+* estilos generales para la panltalla de inicio de geoGEC 
+* 
+* @package    	TReCC(tm) Procesos Participativos Urbanos.
+* @subpackage 	estilos
+* @author     	TReCC SA
+* @author     	<mario@trecc.com.ar> <trecc@trecc.com.ar>
+* @author    	www.trecc.com.ar  
+* @copyright	2013 2014 TReCC SA
+* @license    	http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 (GPL-3.0)
+* Este archivo es parte de TReCC(tm) paneldecontrol y de sus proyectos hermanos: baseobra(tm), TReCC(tm) intraTReCC  y TReCC(tm) Procesos Participativos Urbanos.
+* Este archivo es software libre: tu puedes redistriburlo 
+* y/o modificarlo bajo los t�rminos de la "GNU General Public License" 
+* publicada por la Free Software Foundation, version 3
+* 
+* Este archivo es distribuido por si mismo y dentro de sus proyectos 
+* con el objetivo de ser �til, eficiente, predecible y transparente
+* pero SIN NIGUNA GARANT�A; sin siquiera la garant�a impl�cita de
+* CAPACIDAD DE MERCANTILIZACI�N o utilidad para un prop�sito particular.
+* Consulte la "GNU General Public License" para m�s detalles.
+* 
+* Si usted no cuenta con una copia de dicha licencia puede encontrarla aqu�: <http://www.gnu.org/licenses/>.
+*/
+
+
+.celda{
+	display:inline-block;
+	width:180px;
+}
+
+div.fila{
+	width:360px;
+	height:auto;
+}
+
+div.nombre[estado='activo']{
+	color:#08AFD9;
+	cursor:pointer;
+}
+
+div.nombre[estado='activo']:hover{
+	color:#fff;
+	background-color:#08AFD9;
+}
+
+#titulomapa{
+	z-index:3;
+	position:absolute;
+	top:0.5vh;
+	left:0.5vh;
+	width:20vw;
+	height:auto;
+	border:1px solid #08AFD9;
+	background-color:#fff;	
+	display:none;
+	box-shadow:5px 5px 5px rgba(50,50,50,0.8);
+}
+
+#titulomapa h1{
+	background-color:rgba(255, 102, 0, 0.2);
+	border:1px solid #ff6600;
+	margin:2px;
+}	
+	
+#titulomapa b p{
+	background-color:rgba(255,102,0,1);
+	border:1px solid #ff3333;
+	display:inline-block;
+	border-radius:8px;
+	padding:2px 5px;
+	display:none;
+	margin:4px;
+}
+
+div.nombre[estado="activo"][selecto='si']{
+	background-color:lightblue;
+	color:#000;
+}
+	
+#shp{
+	background-color:#fff;
+	border:1px solid #000;
+	top:calc(50vh - 50px);
+	left:calc(50vw - 100px);
+	width:200px;
+	height:100px;
+}
+
+#shp select{
+	width: 99%;
+}
+
+.cerrar{
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+#cuadrovalores h2 > span{
+font-size:11px;
+font-weight:normal;
+}
+
+#menutablas #lista{
+	max-height:160px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+#menutablas #lista a{
+	vertical-align:middle;
+	margin-left:3px;
+	min-width:20px;
+	text-align:center;
+}
+#menutablas #lista a.nombretabla{
+	vertical-align:middle;
+	margin-left:3px;
+	display:inline-block;
+	width:300px;
+	text-align:left;
+	font-size:16px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+#menutablas #lista a.nombretabla span{
+	font-size:11px;
+}
+#menuelementos{
+	display:none;
+}
+#menuelementos #lista{
+	max-height:135px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+#menuelementos #lista a:hover{
+    background-color:#ff6600;
+}
+#menuelementos #lista a[estado='selecto']{
+    background-color:#ff6600;
+}
+#menuelementos #lista a{
+	vertical-align:middle;
+	margin-left:3px;
+	width:396px;
+	text-align:left;
+    background-color: rgba(255, 102, 0, 0.2);
+    border: 1px solid #ff6600;
+    height: 15px;
+    color:#000;
+    margin-bottom:1px;
+}
+#menuelementos #lista a span.nom{
+	margin-left:3px;
+	display:inline-block;
+	width:286px;
+	overflow:hidden;
+	text-align:left;
+	height:15px;
+}
+#menuelementos #lista a span.cod{
+	
+	display:inline-block;
+	font-size:11px;
+	width:100px;
+	overflow:hidden;
+	text-align:left;
+}
+
+#menuelementos #lista{
+	max-height:135px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+#menuelementos #lista a:hover{
+    background-color:#ff6600;
+}
+#menuelementos #lista a[estado='selecto']{
+    background-color:#ff6600;
+}
+#menuelementos #lista a{
+	vertical-align:middle;
+	margin-left:3px;
+	width:396px;
+	text-align:left;
+    background-color: rgba(255, 102, 0, 0.2);
+    border: 1px solid #ff6600;
+    height: 15px;
+    color:#000;
+    margin-bottom:1px;
+}
+#menuelementos #lista a span.nom{
+	margin-left:3px;
+	display:inline-block;
+	width:286px;
+	overflow:hidden;
+	text-align:left;
+	height:15px;
+}
+#menuelementos #lista a span.cod{
+	
+	display:inline-block;
+	font-size:11px;
+	width:100px;
+	overflow:hidden;
+	text-align:left;
+}
+
+
+
+
+
+
+#menupropios #lista{
+	max-height:135px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+#menupropios #lista a:hover{
+    background-color:#ff6600;
+}
+#menupropios #lista a[estado='selecto']{
+    background-color:#ff6600;
+}
+#menupropios #lista a{
+	vertical-align:middle;
+	margin-left:3px;
+	width:384px;
+	text-align:left;
+    background-color: rgba(255, 102, 0, 0.2);
+    border: 1px solid #ff6600;
+    height: 15px;
+    color:#000;
+    margin-bottom:1px;
+}
+#menupropios #lista a span.nom{
+	margin-left:3px;
+	display:inline-block;
+	width:281px;
+	overflow:hidden;
+	text-align:left;
+	height:15px;
+	
+}
+#menupropios #lista a span.cod{
+	
+	display:inline-block;
+	font-size:11px;
+	width:100px;
+	overflow:hidden;
+	text-align:left;
+}
+
+
+
+
+#menuacciones{
+	display:none;
+}
+
+#menuelementos #lista a[cargado='si']{
+    background-color: rgba(228,25,55,1);
+}
+#menudatos{
+	display:none;
+}
+#menudatos label{
+	width: 100px;
+	font-size:12px;
+}
+#menudatos .fila{
+	width: 410px;
+}
+
+#menudatos .dato{
+	width: 310px;
+	font-size:14px;
+}
+
+label.upload{
+	width:130px;
+	height:30px;
+	display:inline-block;
+	margin:3px;
+}	
+#uploadinput{
+	position: absolute;
+	display:block;
+	width:130px;
+	margin:0;
+	color: #f55;
+	background-color: #ffb;
+	vertical-align: middle;
+
+	font-family: inherit;
+	margin-bottom: 5px;
+	vertical-align: middle;
+	height: 22px;
+	
+}
+
+select{
+	float:none;
+}
+.upload > span{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 130px;
+    height: 22px;
+    line-height: 11px;
+    display: inline-block;
+    width: 90px;
+    font-size: 12px;
+    font-weight: normal;
+	border-top: 1px gray solid;
+	border-left: 1px gray solid;
+	border-right: 1px gray solid;
+	border-bottom: 1px  gray solid;
+}
+
+.carga{
+	background-color:#fd9;	
+}
+
+.carga[estado='subido']{
+	background-color:#df9;
+}
+
+.carga[estado='fallido']{
+	background-color:#f00;
+}
+	
+#archivoscargados{
+	width:200px;	
+}
+
+#archivoscargados [estado='viable']{
+	background-color:#afa;
+	cursor:help;
+}
+#archivoscargados [estado='viableobs']{
+	background-color:#ffa;
+	cursor:help;
+}
+#archivoscargados [estado='inviable']{
+	background-color:#faa;
+	cursor:help;
+}
+
+#procesarBoton[estado='inviable']{
+	background-color:#faa;
+	color:#444;	
+	cursor:help;	
+}
+.componentecarga{
+	width:250px;
+	display:inline-block;
+	vertical-align:top;
+}
+.componentecargalargo{
+	width:400px;
+	display:inline-block;
+	vertical-align:top;
+}
+#camposident div>div{
+	display:inline-block;
+	width:80px;
+	font-size:12px;
+	word-wrap: break-word;
+}
+#camposident div input{
+	height:16px;
+	margin-bottom:0;
+}
+
+#camposident .enshp{
+		display:inline-block;
+		width:80px;
+		border:1px solid #04586c;
+		margin:0px;
+		background-color:rgba(173, 216, 230, 0.5);
+		cursor:move;
+		overflow:hidden;
+		vertical-align: middle;
+		box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+		
+	}
+#camposident #espacioshp{
+	display:inline-block;
+	width:82px;
+	height:16px;
+	border:1px dashed #aaa;
+	margin:0px;
+	overflow:hidden;
+	vertical-align: middle;
+	
+}
+#camposident > div{
+	height:20px;
+}
+#verproccampo{
+	display:none;
+}
+#avanceproceso{
+	display:none;
+	position:absolute;
+	background-color:#fff;
+	top:calc(50% - 25px);
+	left:calc(50% - 50px);
+	height:50px;
+	width:100px;
+	text-align:center;
+	border:3px solid #08afd9;
+	border-radius:5px;
+	font-size:30px;
+	font-weight:bold;
+	box-shadow:10px 10px 5px rgba(50, 50, 50, 0.5);
+	z-index:2000;
+}
+
+.menuAcciones a{
+	display:inline-block;
+	border:1px solid  #08afd9;
+	margin:3px;
+	
+}
+
+#menudatos #descripcion{
+			font-size:14px;
+			text-align:justify;
+		}
+		
+		div#cuadrovalores div#encabezado > h1 a{
+			display:none;			
+		}	
+		
+		
+		div#cuadrovalores #menupropios{
+			display:none;
+		}		
+		
+		div#cuadrovalores[acceso='si'] #menupropios{
+			display:block;
+		}		
+		
+		div#cuadrovalores[acceso='si'] #encabezado{
+			display:none;
+		}
+		
+		div#cuadrovalores[acceso='si'] #menupropios{
+			display:block;
+		}
+		
+		
+		div#cuadrovalores[acceso='si'] #elemento{
+			display:none;
+		}
+		
+		#menupropios[estado='cerrado']{
+			overflow:hidden;
+			font-size:14px;
+			height:24px;
+			transition: height 2s;	
+		}
+		#menupropios[estado='cerrado'] #btnMuestraPropios{
+			display:inline-block;
+		}
+		#menupropios #btnMuestraPropios{
+			display:none;
+			height: 14px;
+			margin: 4px;
+			padding:2px;
+			color:#000;	
+			border: 1px solid #ff6600;		
+		}
+		#menupropios #btnMuestraPropios:hover{
+			background-color: rgba(255, 102, 0, 0.2);
+		}
+		
+		#menupropios #lista a[cargado='si']{
+			border: 1px solid rgba(255,25,55,1);
+    		background-color: rgba(228,25,55,0.8);
+		}

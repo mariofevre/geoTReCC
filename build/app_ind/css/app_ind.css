@@ -1,0 +1,838 @@
+#page .mapa {
+    position: relative;
+    width: 600px;
+    height: 601px;
+    left: 0px;
+}
+
+#page .portamapa {
+    display:inline-block;
+    vertical-align:top;
+    border:none;
+}
+
+#page .cuadroaplicacion{
+    display:inline-block;
+    vertical-align:top;
+    width: 40%;
+}
+
+.capaEncabezadoCuadro{
+    border-top: 3px solid #CDF0F9;
+    display: inline-block;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.capaEncabezadoCuadro h1{
+    font-size: 23px;
+}
+
+.formCargaInd {
+    position:relative;
+    display:none;
+}
+
+
+.elementoOculto {
+    display: none;
+}
+
+.filaIndLista{
+    width: 100%;
+}
+
+.filaIndLista[filtrado='si']{
+	display:none;
+}
+.filaIndLista[filtrado='si'][cargado='si']{
+	display:block;
+}
+
+#formSeleccionInd{
+	display:none;
+}
+#cuadrovalores[modo='indicadores'] #formSeleccionInd{
+	display:block;
+}
+#cuadrovalores[modo='indicadores'][estado='elemento'] #formSeleccionInd{
+	display:none;
+}
+
+#cuadrovalores[divListaIndicadoresCarga='si'] #divListaIndicadoresCarga{
+	display:block;
+}
+
+
+#cuadrovalores[formCargaInd='si'] #formCargaInd{
+	display:block;
+}
+
+#formSeleccionMod{
+	display:none;
+}
+#cuadrovalores[modo='modelos'] #formSeleccionMod{
+	display:block;
+}
+
+#botonIndicadoresModelo{
+
+}
+
+#cuadrovalores[estado='elemento'] #botonCrearIndicador{
+	display:none;
+}
+
+#cuadrovalores[modo='modelos'] #botonCrearIndicador{
+	display:none;
+}
+
+
+#cuadrovalores:not([modo='modelos']) #botonCrearModelo{
+	display:none;
+}
+
+
+#botonCrearIndicador{
+	display:inline-block;
+}
+
+#cuadrovalores[modo='modelos'] #botonIndicadoresModelo{
+	display:none;
+}
+
+
+#botonCancelarCarga{
+	display:none;
+}
+
+#cuadrovalores[modo='modelos'] #botonCancelarCarga{
+	display:inline-block;
+}
+
+
+#indIdLista{
+    position:relative;
+    display:inline-block;
+    width: 10%;
+    vertical-align:middle;
+}
+
+#form_ind_exp{
+	position:fixed;
+	  --bs-modal-zindex: 1055;
+  --bs-modal-width: 500px;
+  --bs-modal-padding: 1rem;
+  --bs-modal-margin: 0.5rem;
+  --bs-modal-color: ;
+  --bs-modal-bg: #fff;
+  --bs-modal-border-color: var(--bs-border-color-translucent);
+  --bs-modal-border-width: 1px;
+  --bs-modal-border-radius: 0.5rem;
+  --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --bs-modal-inner-border-radius: calc(0.5rem - 1px);
+  --bs-modal-header-padding-x: 1rem;
+  --bs-modal-header-padding-y: 1rem;
+  --bs-modal-header-padding: 1rem 1rem;
+  --bs-modal-header-border-color: var(--bs-border-color);
+  --bs-modal-header-border-width: 1px;
+  --bs-modal-title-line-height: 1.5;
+  --bs-modal-footer-gap: 0.5rem;
+  --bs-modal-footer-bg: ;
+  --bs-modal-footer-border-color: var(--bs-border-color);
+  --bs-modal-footer-border-width: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--bs-modal-zindex);
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.row {
+  margin-top: calc(var(--bs-gutter-x) * .5);
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.row > * {
+  margin-right: calc(var(--bs-gutter-x) * .5);
+  margin-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.row > * {
+  
+  max-width: 100%;
+  margin-top: var(--bs-gutter-y);
+}
+
+
+#form_ind_exp textarea{
+	height:100px;
+	font-size:12px;
+}
+#form_ind_exp input[type='radio'], #form_ind_exp input[type='checkbox']{
+	width: 30px;
+	display:inline-bock;
+}
+#form_ind_exp .row label{
+  width: calc(100% - 80px);
+  display: inline-block;
+}
+
+#form_ind_exp h6{
+margin-top:5px;
+margin-bottom:5px;
+}
+
+#form_ind_exp input{
+	width: 100%;
+	font-size:12px;
+}
+#form_ind_exp label{
+	font-weight:normal;
+	width: 100%;
+}
+
+#form_ind_exp{
+	background-color:rgba(0,0,0,0.2);
+}
+#form_ind_exp[estado='activo']{
+	display:flex;
+}
+
+#form_ind_exp .borde-contenido{
+	max-width: 90vw;
+	margin-top: 5vh;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+}
+
+
+#form_ind_exp .contenido{
+	overflow:scroll;
+	max-height: 90vh;
+	padding: 1vw;
+	max-width: 90vw;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	width: 100%;
+	color: var(--bs-modal-color);
+	pointer-events: auto;
+	background-color: var(--bs-modal-bg);
+	background-clip: padding-box;
+	border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+	border-radius: var(--bs-modal-border-radius);
+	outline: 0;
+}
+
+#form_ind_exp[modo='modelo'] #esindicador{
+	display:none;
+}
+#form_ind_exp[modo='indicador'] #esmodelo{
+	display:none;
+}
+
+#indIdLista .idn{
+	font-size:150%;
+	font-weight: bold;
+	vertical-align:middle;
+}
+#indNombreLista{
+    position:relative;
+    display:inline-block;
+    width: 25%;
+    vertical-align:middle;
+}
+#indDescripcionLista{
+    position:relative;
+    display:inline-block;
+    width: 65%;
+    vertical-align:middle;
+}
+
+#indAutoriaLista{
+    position:absolute;
+    bottom:1px;
+    right:0px;
+    font-style:italic;
+    font-size:9px;
+    background-color:#fff;
+    line-height: 6px;
+
+}
+
+.tituloCuerpo{
+    width: 80%;
+    display: inline-block;
+}
+.menuAcciones{
+    width: 100%;
+    vertical-align: top;
+}
+
+.elementoCarga{
+    display:inline-block;
+    vertical-align:top;
+}
+.elementoCarga h1{
+    font-size: 18px;
+    overflow: hidden;
+    margin: 0px;
+}
+.elementoCarga #shp{
+    height: auto;
+}
+.elementoCarga input{
+    width: 90%;
+}
+.elementoCarga select{
+    width: 90%;
+}
+
+.elementoCargaLargo{
+    width:98%;
+    display:inline-block;
+    vertical-align:top;
+}
+.elementoCargaLargo#periodo{
+	margin-top:10px;
+    border-top:3px solid #000;	
+}
+
+.elementoCargaLargo h1{
+    font-size: 18px;
+    overflow: hidden;
+}
+.elementoCargaLargo h2{
+	border-bottom: 1px solid #444;
+}
+.elementoCargaLargo label{
+    font-size: 16px;
+    display:inline-block;
+    overflow: hidden;
+}
+
+.elementoCargaLargo .divValor{
+    font-size: 14px;
+    display:inline-block;
+    overflow: hidden;
+}
+
+#formEditarIndicadores{
+    margin: 0 10px;
+}
+
+.indValoresRep{
+    display:inline-block;
+    width: 5%;
+}
+.indValoresNombre{
+    display:inline-block;
+    width: 40%;
+}
+.indValoresTipo{
+    display:inline-block;
+    width: 20%;
+}
+.indValoresUnidad{
+    display:inline-block;
+    width: 25%;
+}
+.indValoresEliminar{
+    display:inline-block;
+    width: 8%;
+}
+
+#representacionescalacolor{
+    display:none;		
+}
+#representacionescalacolor .fila{
+    height:30px;
+    display:block;
+    overflow: visible;
+    border:none;
+    background:transparent;
+    width: auto;
+}  
+#representacionescalacolor .fila #colorejemplo{
+    width:20px;
+    height:28px;
+    vertical-align: bottom;
+    border-bottom:1px solid #000;
+    padding-left:2px;
+}
+
+#representacionescalacolor[tipo='numero'] .fila:first-child{
+    height:14px;
+}
+#representacionescalacolor[tipo='numero'] .fila:first-child #colorejemplo{
+    height: 10px;
+    bottom: 3px;	
+}
+
+#representacionescalacolor[tipo='numero'] .fila:last-child #colorejemplo{
+    border-bottom:none;
+    height:10px 		
+}
+#representacionescalacolor[tipo='numero'] .fila:last-child{
+    height:12px;
+}
+#representacionescalacolor .fila #valorminimo{
+    width:10px;
+    vertical-align: bottom;
+    overflow: visible;
+}
+#representacionescalacolor .fila #valorminimo p{
+    position:relative;
+    bottom:-4px;
+    margin:0;
+}
+#representacionescalacolor .fila #valorminimo input{
+    position:relative;
+    bottom:-12px;
+}		
+#representacionescalacolor #sobre #colorejemplo{
+    background-color:#e41937;
+}  
+#representacionescalacolor #maximo #colorejemplo{
+    background-color:#e41937;
+}  
+#representacionescalacolor #alto #colorejemplo{
+    background-color:#da7573;
+} 
+#representacionescalacolor #bajo #colorejemplo{
+    background-color:#d2c6a7;
+}
+#representacionescalacolor #minimo #colorejemplo{
+    background-color:#ccffcc;
+}
+#representacionescalacolor #sub #colorejemplo{
+    background-color:#ccffcc;
+}
+
+#representacionescalacolor[tipo='texto'] .color{
+    width:30px;
+    height:20px;
+}
+
+input[type="radio"]{
+    display:inline-block;
+}
+
+.filaIndLista{
+    width: 100%;
+    border-bottom: 1px solid rgba(150,150,150);
+}
+
+
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.card {
+  border: 2px solid white;
+  width: 50px;
+  height: 50px;
+  display: inline-block; 
+  background-color:#aaa;
+  position:relative;
+}
+
+.card[selected='true']{
+	border: 2px solid rgb(8,175,217);
+}
+
+.card img.completo{
+	display:none;
+	position:absolute;
+	top:0px;
+	right:0px;
+	height:9px;
+}
+.card.completo img.completo{
+	display:block;
+}
+
+.card h2{
+  font-size: 10px;
+  text-overflow: wrap;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  border:none;
+}
+.card h2.dia{
+	font-size: 16px;
+	float: left;
+	display: block;
+	width: 20px;
+	margin-top: 1px;
+	font-weight: normal;
+}
+.card h2.mes{
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.sincarga{
+    background: gray;
+}
+.cargacompleto{
+    background: green;
+}
+
+
+.cargaincompleta{
+    background: red;
+}
+
+.scrolling-wrapper {
+  height: 70px;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+#barrabusquedaI {
+	width: 200px;
+}
+
+div#barrabusqueda:hover{
+	box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+}
+
+
+#barrabusqueda[estado='activo'] a{
+	display:block;
+}
+
+#barrabusqueda input{
+	color:#aaa;
+} 
+
+#barrabusqueda[estado='activo'] input{
+	color:#08afd9;
+} 
+		
+		
+#formCargaInd {
+    position:relative;
+    display:none;
+}
+#formCargaInd #botoncancelaedita{
+	position:absolute;
+	top:0px;
+	right:25px;
+}
+#formCargaInd #botonedita{
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+
+#cuadrovalores[formCargaInd='si'] #formCargaInd{
+    display:block;
+}
+
+
+#formCargaInd #accionesInd{
+	display:none;
+}
+
+#cuadrovalores[formEditarIndicadores='si'] #accionesInd{
+	display:block;
+}
+
+
+
+#AccionesSeleccionIndCambio > a{
+	display:block;
+}
+
+.unidad {
+	border:1px solid rgba(0,0,0,0);
+	border-bottom: 1px solid #000;
+	margin-left: 10px;
+	margin-top: 3px;
+}
+.unidad h4{
+	display:inline-block;
+	width:80px;
+}
+.unidad h4{
+	display:block;
+	width:auto;
+}
+.unidad div{
+	display:inline-block;
+	width:auto;
+}
+.unidad input{
+	margin:1px;
+	height:15px;
+}
+.unidad input[class='number']{
+	width:60px;
+}
+.unidad[selecta='si']{
+	border:1px solid #08afd9;
+	background-color:lightblue;
+}
+
+.unidad input[cambiado='si']{
+	background-color:pink;
+	color:red;
+}
+
+
+#botonCrearGeom{
+	display:none;
+}
+#formcalculo{
+	display:none;
+}
+ #botonDuplicarGeom{
+	display:none;
+}
+
+
+#periodo > #selectorPeriodo div .resultado{
+	display:none;
+	font-size:12px;
+}
+
+#periodo[campo='n1'] .resultado#n1{
+	display:block;
+}
+#periodo[campo='n2'] .resultado#n2{
+	display:block;
+}
+#periodo[campo='n3'] .resultado#n3{
+	display:block;
+}
+#periodo[campo='n4'] .resultado#n4{
+	display:block;
+}
+#periodo[campo='n5'] .resultado#n5{
+	display:block;
+}
+
+
+
+#periodo > #selectorPeriodo div #valor{
+	height:15px;
+}
+
+
+
+ #periodo > #selectorPeriodo{
+	vertical-align:top;
+}
+#periodo > #selectorPeriodo div{
+	vertical-align: top;
+	text-align:center;
+}
+#tipodeometriaNuevaGeometria{
+	display:none;
+}
+
+.unidad input.renombra {
+	border:none;
+	width:200px;
+	font-size:11px;
+	font-weight:bold;
+	color:#000;
+	cursor:pointer;
+}
+
+.unidad input.renombra[editando='si'] {
+	color:red;
+	background-color:pink;
+}
+
+
+#listarelesfuente a{
+	display:block;
+}
+#formImportarRele #selectorCamposRele{
+	display:none;
+}
+#formImportarRele #selectorCamposRele[estado='activo']{
+	display:block;
+}
+
+
+
+#form_cruce{
+	position:fixed;
+	--bs-modal-zindex: 1055;
+  --bs-modal-width: 500px;
+  --bs-modal-padding: 1rem;
+  --bs-modal-margin: 0.5rem;
+  --bs-modal-color: ;
+  --bs-modal-bg: #fff;
+  --bs-modal-border-color: var(--bs-border-color-translucent);
+  --bs-modal-border-width: 1px;
+  --bs-modal-border-radius: 0.5rem;
+  --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --bs-modal-inner-border-radius: calc(0.5rem - 1px);
+  --bs-modal-header-padding-x: 1rem;
+  --bs-modal-header-padding-y: 1rem;
+  --bs-modal-header-padding: 1rem 1rem;
+  --bs-modal-header-border-color: var(--bs-border-color);
+  --bs-modal-header-border-width: 1px;
+  --bs-modal-title-line-height: 1.5;
+  --bs-modal-footer-gap: 0.5rem;
+  --bs-modal-footer-bg: ;
+  --bs-modal-footer-border-color: var(--bs-border-color);
+  --bs-modal-footer-border-width: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--bs-modal-zindex);
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+
+
+#form_cruce textarea{
+	height:100px;
+	font-size:12px;
+}
+#form_cruce input[type='radio'], #form_cruce input[type='checkbox']{
+	width: 30px;
+	display:inline-bock;
+}
+#form_cruce .row label{
+  width: calc(100% - 80px);
+  display: inline-block;
+}
+
+#form_cruce h6{
+margin-top:5px;
+margin-bottom:5px;
+}
+
+#form_cruce input{
+	width: 100%;
+	font-size:12px;
+}
+#form_cruce label{
+	font-weight:normal;
+	width: 100%;
+}
+
+#form_cruce{
+	background-color:rgba(0,0,0,0.2);
+}
+#form_cruce[estado='activo']{
+	display:flex;
+}
+
+#form_cruce .borde-contenido{
+	max-width: 70vw;
+	margin-top: 15vh;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+}
+
+
+#form_cruce .contenido{
+	overflow:scroll;
+	max-height: 70vh;
+	padding: 1vw;
+	max-width: 90vw;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	width: 100%;
+	color: var(--bs-modal-color);
+	pointer-events: auto;
+	background-color: var(--bs-modal-bg);
+	background-clip: padding-box;
+	border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+	border-radius: var(--bs-modal-border-radius);
+	outline: 0;
+}
+
+#form_cruce[modo='modelo'] #esindicador{
+	display:none;
+}
+#form_cruce[modo='indicador'] #esmodelo{
+	display:none;
+}
+
+
+#ventanagrafico{
+	display:none;
+	background-color:#fff;
+	position:fixed;
+	top:max(80px, calc(50vh - 400px));
+	left:max(80px, calc(50vw - 500px));
+	border:2px solid #08afd9;
+	box-shadow:10px 10px 20px rgba(0,0,0,0.5);
+	z-index:2000
+}
+#ventanagrafico[estado='activo']{
+	display:block;
+}
+
+#ventanagrafico a{
+	position:absolute;
+	top:10px;
+	left:10px;
+}
+#ventanagrafico a#botondescargar{
+	top:60px;			
+}		
+
+#cuadrovalores #formSeleccionInd, 
+#cuadrovalores #formSeleccionMod, 
+#cuadrovalores #formEditarIndicadores, 
+#cuadrovalores #divListaIndicadoresCarga {
+	display: none;
+}
+#cuadrovalores[formseleccionind="si"] #formSeleccionInd,
+#cuadrovalores[formseleccionmod="si"] #formSeleccionMod,
+#cuadrovalores[formeditarindicadores="si"] #formEditarIndicadores,
+#cuadrovalores[formdivlistaindicadorescarga="si"] #divListaIndicadoresCarga {
+	display: block;
+}
+
+#cuadrovalores[botonIndicadoresModelo="no"] #botonIndicadoresModelo {
+	display: none;
+}

@@ -1,0 +1,17 @@
+#formEditarCandidato [name='geotx'],
+#formEditarCandidato [name='descripcion']{
+    width:100%;
+    font-size:8px;
+    font-family:arial;
+}
+#formEditarCandidato [name='descripcion']{
+	height:40px;
+}
+
+#page #cuadrovalores #formEditarCandidato .elementoCarga{
+	width: 98%;
+}
+
+.elementoCarga input{
+	width: 98%;
+}

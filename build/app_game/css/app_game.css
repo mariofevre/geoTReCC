@@ -1,0 +1,438 @@
+@font-face {
+  font-family: 'game';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./game.woff') format('woff');
+}
+
+#page .mapa {
+    position: relative;
+    width: 600px;
+    height: 601px;
+    left: 0px;
+}
+
+#page .portamapa {
+    display:inline-block;
+    vertical-align:top;
+    border:none;
+    position:relative;
+}
+
+#page .cuadroaplicacion{
+    display:inline-block;
+    vertical-align:top;
+    width: 40%;
+}
+
+.capaEncabezadoCuadro{
+    border-top: 3px solid #CDF0F9;
+    display: inline-block;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.capaEncabezadoCuadro h1{
+    font-size: 23px;
+}
+
+.formCargaSesion {
+    position:relative;
+    display:none;
+}
+
+
+.elementoOculto {
+    display: none;
+}
+
+.filaSesionLista{
+    width: 100%;
+}
+
+.filaSesionLista[filtrado='si']{
+	display:none;
+}
+.filaSesionLista[filtrado='si'][cargado='si']{
+	display:block;
+}
+
+#formSeleccionSesion{
+	
+}
+#SesionIdLista{
+    position:relative;
+    display:inline-block;
+    width: 10%;
+    vertical-align:middle;
+}
+#SesionIdLista .idn{
+	font-size:150%;
+	font-weight: bold;
+	vertical-align:middle;
+}
+#SesionNombreLista{
+    position:relative;
+    display:inline-block;
+    width: 25%;
+    vertical-align:middle;
+}
+#SesionDescripcionLista{
+    position:relative;
+    display:inline-block;
+    width: 65%;
+    vertical-align:middle;
+}
+
+#SesionAutoriaLista{
+    position:absolute;
+    bottom:1px;
+    right:0px;
+    font-style:italic;
+    font-size:9px;
+    background-color:#fff;
+    line-height: 6px;
+
+}
+
+.tituloCuerpo{
+    width: 80%;
+    display: inline-block;
+}
+.menuAcciones{
+    width: 100%;
+    vertical-align: top;
+}
+
+.elementoCarga{
+    width:48%;
+    display:inline-block;
+    vertical-align:top;
+}
+.elementoCarga.largo{
+    width:98%;
+}
+
+.elementoCarga h1{
+    font-size: 18px;
+    overflow: hidden;
+    margin: 0px;
+}
+.elementoCarga #shp{
+    height: auto;
+}
+.elementoCarga input{
+    width: 90%;
+}
+.elementoCarga textarea{
+    width: 90%;
+    height:100px;
+    font-size:11px;
+}
+.elementoCarga select{
+    width: 90%;
+}
+
+.elementoCargaLargo{
+    width:98%;
+    display:inline-block;
+    vertical-align:top;
+}
+.elementoCargaLargo#periodo{
+	margin-top:10px;
+    border-top:3px solid #000;	
+}
+
+.elementoCargaLargo h1{
+    font-size: 18px;
+    overflow: hidden;
+}
+.elementoCargaLargo h2{
+	border-bottom: 1px solid #444;
+}
+.elementoCargaLargo label{
+    font-size: 16px;
+    display:inline-block;
+    overflow: hidden;
+}
+
+.elementoCargaLargo .divValor{
+    font-size: 14px;
+    display:inline-block;
+    overflow: hidden;
+}
+
+#formEditarSesionicadores{
+    margin: 0 10px;
+}
+
+.SesionValoresRep{
+    display:inline-block;
+    width: 5%;
+}
+.SesionValoresNombre{
+    display:inline-block;
+    width: 40%;
+}
+.SesionValoresTipo{
+    display:inline-block;
+    width: 20%;
+}
+.SesionValoresUnidad{
+    display:inline-block;
+    width: 25%;
+}
+.SesionValoresEliminar{
+    display:inline-block;
+    width: 8%;
+}
+
+#representacionescalacolor{
+    display:none;		
+}
+#representacionescalacolor .fila{
+    height:30px;
+    display:block;
+    overflow: visible;
+    border:none;
+    background:transparent;
+}  
+#representacionescalacolor .fila #colorejemplo{
+    width:20px;
+    height:28px;
+    vertical-align: bottom;
+    border-bottom:1px solid #000;
+    padding-left:2px;
+}
+
+#representacionescalacolor[tipo='numero'] .fila:first-child{
+    height:14px;
+}
+#representacionescalacolor[tipo='numero'] .fila:first-child #colorejemplo{
+    height: 10px;
+    bottom: 3px;	
+}
+
+#representacionescalacolor[tipo='numero'] .fila:last-child #colorejemplo{
+    border-bottom:none;
+    height:10px 		
+}
+#representacionescalacolor[tipo='numero'] .fila:last-child{
+    height:12px;
+}
+#representacionescalacolor .fila #valorminimo{
+    width:10px;
+    vertical-align: bottom;
+    overflow: visible;
+}
+#representacionescalacolor .fila #valorminimo p{
+    position:relative;
+    bottom:-4px;
+    margin:0;
+}
+#representacionescalacolor .fila #valorminimo input{
+    position:relative;
+    bottom:-12px;
+}		
+#representacionescalacolor #sobre #colorejemplo{
+    background-color:#e41937;
+}  
+#representacionescalacolor #maximo #colorejemplo{
+    background-color:#e41937;
+}  
+#representacionescalacolor #alto #colorejemplo{
+    background-color:#da7573;
+} 
+#representacionescalacolor #bajo #colorejemplo{
+    background-color:#d2c6a7;
+}
+#representacionescalacolor #minimo #colorejemplo{
+    background-color:#ccffcc;
+}
+#representacionescalacolor #sub #colorejemplo{
+    background-color:#ccffcc;
+}
+
+#representacionescalacolor[tipo='texto'] .color{
+    width:30px;
+    height:20px;
+}
+
+input[type="radio"]{
+    display:inline-block;
+}
+
+.filaSesionLista{
+    width: 100%;
+}
+
+
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.card {
+  border: 2px solid white;
+  width: 50px;
+  height: 50px;
+  display: inline-block; 
+}
+
+.card h2{
+  font-size: 10px;
+  text-overflow: wrap;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.sincarga{
+    background: gray;
+}
+.cargacompleta{
+    background: green;
+}
+.cargaincompleta{
+    background: red;
+}
+
+.scrolling-wrapper {
+  height: 70px;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+
+
+#barrabusqueda{
+	box-shadow:2px 2px 4px rgba(0,0,0,0.5);
+	display:inline-block;
+	width: calc(100% - 10px);
+	max-width:400px;
+	height:20px;
+	position:relative;
+	margin-bottom: 10px;
+}
+div#barrabusqueda:hover{
+	box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+}
+
+#barrabusqueda input{
+	width:100%;
+	border:none;
+	margin:0;
+	padding:0;
+	height: 100%;
+}
+#barrabusqueda a{
+	right:2px;
+	top:2px;
+	height:10px;
+	position:absolute;
+	color:#E41937;
+	background-color:#fff;
+	border: 1px solid #E41937;
+	border-radius: 3px;
+	display:none;
+} 
+
+#barrabusqueda[estado='activo'] a{
+	display:block;
+}
+
+#barrabusqueda input{
+	color:#aaa;
+} 
+
+#barrabusqueda[estado='activo'] input{
+	color:#08afd9;
+} 
+		
+#barrabusqueda a:hover{
+	background-color:#E41937;			
+} 
+
+#botonCancelarCarga{
+	display:none;
+}
+
+.formCargaSesion {
+    position:relative;
+    display:none;
+}
+
+#AccionesSeleccionSesionCambio > a{
+	display:block;
+}
+
+.unidad {
+	border:1px solid rgba(0,0,0,0);
+	border-bottom: 1px solid #000;
+	margin-left: 10px;
+	margin-top: 3px;
+}
+.unidad h4{
+	display:inline-block;
+	width:80px;
+}
+.unidad div{
+	display:inline-block;
+	width:auto;
+}
+.unidad input{
+	margin:1px;
+	height:15px;
+}
+.unidad input[class='number']{
+	width:60px;
+}
+.unidad[selecta='si']{
+	border:1px solid #08afd9;
+	background-color:lightblue;
+}
+
+.unidad input[cambiado='si']{
+	background-color:pink;
+	color:red;
+}
+
+
+#gifanimado{
+	display:none;
+	position:fixed;
+	width:50px;
+	left:calc(50vw - 26px);
+	top:calc(50vh - 26px);	
+	border: 2px solid #08afd9;
+	box-shadow: 10px 10px 5px rgba(0,0,0,0.8);
+	z-index: 1000;
+}
+#gifanimado img{
+	width:50px;
+}
+#turnos{
+	border-top:1px solid #08afd9;
+}
+#turnos #actual{
+	font-size:20px;	
+}
+#turnos #actual span#nturn{
+	font-size:60px;	
+}
+#graficos{
+	border-top:1px solid #08afd9;
+}
+#graficos p{
+	font-size:20px;	
+	
+}
+#graficos p #puntajeactual{
+	font-size:60px;	
+}

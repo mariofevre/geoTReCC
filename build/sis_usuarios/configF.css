@@ -1,0 +1,115 @@
+#formacceso{
+	width:70vw;
+	height:70vh;
+	display:none;
+	position:fixed;
+	top:15vh;
+	right:15vw;
+	background-color:#fff;
+	border:2px solid #08afd9;
+	box-shadow:5px 5px 10px #000;
+	z-index:6;
+	overflow-y:scroll;
+}
+
+#formacceso[estado='activo']{
+	display:block;
+}
+
+#formacceso a{
+	border:2px solid #08afd9;
+	text-align:right;
+	width:auto;
+		box-shadow:2px 2px 4px #000;
+}
+#formacceso a:hover{
+	background-color:#08afd9;
+	border:2px solid #08afd9;
+	box-shadow:2px 2px 4px #000;
+}
+
+#formacceso input{
+	height:2vw;
+}
+#dataacceso p{
+	display:inline-block;
+	width:20%;
+	text-align:right;
+}
+
+#dataacceso input{
+	display:inline-block;
+	width:20%;
+}
+
+#dataregistro{
+	display:none;
+}
+
+#dataregistro p{
+	display:inline-block;
+	width:20%;
+	text-align:right;
+}
+
+#dataregistro input{
+	display:inline-block;
+	width:20%;
+}
+#dataregistro{
+	display:none;
+}
+#ayuda{
+	display:none;
+	width:92%;
+	height:78%;
+	position:absolute;
+	top:2%;
+	left:2%;
+	border:2px solid #08afd9;
+	box-shadow:2px 2px 4px #000;
+	padding:2%;
+	padding-top:6%;
+}
+#cerr{
+	display:block;
+	position:absolute;
+	right:10px;
+	top:1vw;
+	max-width:30%;
+}
+#info{
+	display:block;
+	position:absolute;
+	right:10px;
+	top:3vw;
+	max-width:30%;
+}
+#ampliar{
+	margin-left:28vw;
+	margin-top:2vw;
+	display:inline-block;
+}
+
+#dataacceso input[type="button"]:hover {
+    background-color: #08afd9;
+    border: 2px solid #08afd9;
+    box-shadow: 2px 2px 4px #000;
+    color: #dceff3;
+    text-decoration: none;
+}
+
+#dataacceso input[type="button"] {
+    text-align: right;
+    width: auto;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    background-color: #FFFFFF;
+    border: 2px solid #08afd9;
+    box-shadow: 2px 2px 4px #000;
+    color: #08afd9;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,91 @@
+#menubuscado{
+	width:30vw;
+	height:70vh;
+	display:none;
+	position:fixed;
+	top:15vh;
+	right:15vw;
+	background-color:#fff;
+	border:2px solid #08afd9;
+	box-shadow:5px 5px 10px #000;
+	z-index:6;
+	overflow-y:scroll;
+}
+#menubuscado[estado='activo']{
+	display:block;
+}
+
+#menubuscado a{
+	border:2px solid #08afd9;
+	text-align:left;
+	width:auto;
+	box-shadow:2px 2px 4px #000;
+	display:block;
+	min-height: 22px;
+}
+
+#menubuscado a .logo{
+	display:inline-block;
+	width: 33px;
+}
+
+#menubuscado a .nom{
+	display:inline-block;
+	width: calc(100% - 117px);
+}
+
+#menubuscado a .marco{
+	display:inline-block;
+	border:1px solid #08afd9;
+	float:right;
+	width:80px;
+	height: 22px;
+	word-wrap: break-word;
+	line-height: 11px;
+	
+}
+#menubuscado a:hover{
+	background-color:#08afd9;
+	border:2px solid #08afd9;
+	box-shadow:2px 2px 4px #000;
+}
+
+#menubuscado input{
+	height:2vw;
+}
+
+
+#muestraresultado{
+	width:40vw;
+	height:40vh;
+	display:none;
+	position:fixed;
+	top:15vh;
+	right:46vw;
+	background-color:#fff;
+	border:2px solid #08afd9;
+	box-shadow:5px 5px 10px #000;
+	z-index:6;
+	overflow-y:scroll;
+}
+#muestraresultado[estado='activo']{
+	display:block;
+}
+#muestraresultado #descripcion{
+	font-size:12px;
+	margin:4px 0px;
+	border:1px solid #08afd9;
+	background-color:#CEF6F5;
+}
+#muestraresultado #referentes{
+
+}
+#muestraresultado #referentes p{
+	border:1px solid #08afd9;
+	border-bottom:1px solid #08afd9;
+	margin:5px;
+	width:calc((100% - 13px) / 3);
+	display:inline-block;
+	height:11px;
+	overflow:hidden;
+}

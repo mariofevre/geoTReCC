@@ -1,0 +1,95 @@
+#formusuarios{
+	width:70vw;
+	height:70vh;
+	display:none;
+	position:fixed;
+	top:15vh;
+	right:15vw;
+	background-color:#fff;
+	border:2px solid #08afd9;
+	box-shadow:5px 5px 10px #000;
+	z-index:6;
+	overflow-y:scroll;
+}
+
+
+#formusuarios[estado='activo']{
+	display:block;
+}
+
+#formusuarios a{
+	border:2px solid #08afd9;
+	text-align:right;
+	width:auto;
+	box-shadow:2px 2px 4px #000;
+}
+#formusuarios a:hover{
+	background-color:#08afd9;
+	border:2px solid #08afd9;
+	box-shadow:2px 2px 4px #000;
+}
+
+#formusuarios input{
+	height: 20px;
+}
+#formusuarios #cerr{
+	display:block;
+	position:absolute;
+	right:10px;
+	top:1vw;
+	max-width:30%;
+}
+
+#formusuarios #encabezado div{
+	display:inline-block;
+	width: calc((70vw - 235px) / 3);
+	margin-left:2px;
+}
+
+form#eliminarpermiso > div[selecto='no']{
+	display:none;
+}
+
+form#eliminarpermiso span{
+	display:inline-block;
+	width: calc((70vw - 235px) / 3);
+	font-family:inherit;
+	overflow:hidden;
+	margin-left:2px;
+}
+
+#formusuarios select option[selecto='no']{
+	color:silver;
+	display:none;
+}
+
+
+#formusuarios span#acc, #formusuarios select#accion{
+	width:50px;
+	display:inline-block;
+}
+
+
+#formusuarios span#niv, #formusuarios select#nivel{
+	width:30px;
+	display:inline-block;
+}
+
+form#eliminarpermiso [borrada='si']{
+	background-color:#ddd;
+	color:#999;
+}
+#formusuarios #datos select{
+	display:inline-block;
+	width: calc((70vw - 235px) / 3);
+	font-family:inherit;
+	margin-left:2px;
+}
+
+#formusuarios #datos select option{
+	font-family:inherit;
+}
+#formusuarios #datos select #log{
+	font-size:70%;
+	font-weight:bold;
+}

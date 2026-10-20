@@ -1,0 +1,232 @@
+/*
+* tablarelev.css
+*
+* estilos generales dise�ads para TReCC Base de Sonido, tabla de relevamiento
+* 
+* @package    	TReCC(tm) Procesos Participativos Urbanos.
+* @subpackage 	estilos
+* @author     	TReCC SA
+* @author     	<mario@trecc.com.ar> <trecc@trecc.com.ar>
+* @author    	www.trecc.com.ar  
+* @copyright	2013 2014 TReCC SA
+* @license    	http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 (GPL-3.0)
+* Este archivo es parte de TReCC(tm) paneldecontrol y de sus proyectos hermanos: baseobra(tm), TReCC(tm) intraTReCC  y TReCC(tm) Procesos Participativos Urbanos.
+* Este archivo es software libre: tu puedes redistriburlo 
+* y/o modificarlo bajo los t�rminos de la "GNU General Public License" 
+* publicada por la Free Software Foundation, version 3
+* 
+* Este archivo es distribuido por si mismo y dentro de sus proyectos 
+* con el objetivo de ser �til, eficiente, predecible y transparente
+* pero SIN NIGUNA GARANT�A; sin siquiera la garant�a impl�cita de
+* CAPACIDAD DE MERCANTILIZACI�N o utilidad para un prop�sito particular.
+* Consulte la "GNU General Public License" para m�s detalles.
+* 
+* Si usted no cuenta con una copia de dicha licencia puede encontrarla aqu�: <http://www.gnu.org/licenses/>.
+*/
+	
+	div.tablarel{
+		width: auto;
+		font-size:10px;
+		text-align:left;
+	}
+	div.tablarel > div{
+		width: auto;
+		margin:0;
+		position: relative;
+	}
+	div.tablarel > div.encabezado{
+		border-top:2px solid #000;
+	}
+
+	div.tablarel > div{
+		height: auto;
+		position: relative;
+		vertical-align:top;
+	}
+
+	div#diurno > div.tablarel > div.encabezado div{
+		background-color:#ffffcc;
+		border-bottom: 0 none;
+	}
+	div#nocturno > div.tablarel > div.encabezado div{
+		background-color:#bbbbdd;
+	}
+	
+	div.tablarel > div div{
+		vertical-align:top;
+		background-color:#fff;
+		display:inline-block;
+		
+	}
+	
+
+	div.tablarel.selecta{
+		border: 6px solid #08afd9;
+		left: -6px;
+		position: relative;
+		width: 1014px;
+   }
+	
+	div.comun{
+		text-align:center;
+	}
+	div.medicion{
+		text-align:center;
+	}
+	
+	div.tablarel div.tit{
+		border-bottom:1px solid #000;
+	}
+	
+	div.medicion > div > div{	
+		min-height: 11px;
+	}
+	
+	
+
+	div.tablarel > div.encabezado > div.mediciones > div.medicion > div > div:nth-child(4), div.tablarel > div.encabezado > div.mediciones > div.medicion > div > div:nth-child(5){
+		border-left:1px solid #000;
+	}
+
+	div.tablarel > div.contenido > div.mediciones > div.medicion > div > div:nth-child(2), 
+	div.tablarel > div.contenido > div.mediciones > div.medicion > div > div:nth-child(3){
+		border-left:1px solid #000;
+	}
+
+	
+	div.tablarel > div.contenido > div.comun > div{
+		border:0px;
+	}	
+	div.tablarel > div > div.comun > div{
+		border:0px;
+	}	
+	div.tablarel > div > div.comun > div:nth-child(2), 
+	div.tablarel > div > div.comun > div:nth-child(3){
+		border-left:1px solid #000;
+	}
+	
+	div.tablarel > div > div.mediciones > div.medicion > div{
+		height:11px;
+		border-bottom:0px;
+		border-top:0px;
+	}
+		
+	div.tablarel > div.encabezado > div.mediciones{
+		border-bottom:0px;
+	}	
+	
+			
+	div.tablarel > div > div{
+		border:1px solid #000;		
+		min-height: 35px;
+		width: 860px;
+	}	
+	
+	div.tablarel > div.encabezado > div.mediciones > div.medicion > div{
+		padding-left:2px;
+		padding-right:2px;
+		border:1px solid #000;		
+		border-top:0px; 
+		 min-height: 35px;
+	}	
+	
+	div.tablarel > div.encabezado > div.mediciones > div.medicion > div:first-child{
+		border-left:0px;
+	}
+
+div.tablarel > div.contenido {
+		height:auto;
+	}
+		
+	div.tablarel > div.contenido > div.mediciones{
+		padding:0;
+		border:1px solid #000;
+	}
+	
+
+	
+
+	div.tablarel > div.contenido > div.mediciones>div.medicion {
+		border: 0px none;
+		border-bottom: 1px solid #000;
+		min-height:0px;
+	}
+	div.tablarel > div.contenido > div.mediciones>div.medicion:last-child {
+		border-bottom: 0px;
+	}
+	
+	div.tablarel > div.contenido > div.mediciones > div.medicion {
+		padding-left:0px;
+		padding-right:0px;
+	}
+	div.tablarel > div.contenido > div.mediciones > div.medicion > div{
+		padding-left:2px;
+		padding-right:2px;
+	}						
+			
+	div.tablarel > div.contenido > div{
+		display:inline-block;
+		border:1px solid #000;
+	}
+	div.tablarel > div.contenido > div > div >div{
+		display:inline-block;
+		border:1px solid #000;
+	}
+	div.tablarel > div.contenido > div > div >div:first-child{
+		
+		border-left:0px;
+	}
+		
+	div.tablarel div.comun{
+		width:150px;
+	}
+	
+	div.tablarel div.id{
+		width:15px;
+		min-height:35px;
+	}
+	div.tablarel div.ubicacion{
+		width:100px;
+		min-height:35px;
+	}
+	div.tablarel div.altura{
+		width:30px;
+		min-height:35px;
+	}
+	div.tablarel div.fecha{
+		width:50px;
+	}
+	div.tablarel div.hora{
+		width:30px;
+	}
+	div.tablarel div.reg{
+		width:20px;
+	}
+	div.tablarel div.medn{
+		width:20px;
+	}																		
+	div.tablarel div.leqA{
+		width:30px;
+	}			
+	div.tablarel div.tit{
+		width: 90px;
+		height: 22px;
+	}		
+	div.tablarel div.L, div.tablarel div.P, div.tablarel div.v{
+		width:30px;
+	}
+	div.tablarel div.obs{
+		width:75px;
+		overflow: hidden;
+	}			
+	
+	
+	div.medicion input{
+		font-family: inherit;
+	    height: 12px;
+	    width:60px;
+	   }
+	
+	div.medicion {
+	    min-height: 0px;
+	}

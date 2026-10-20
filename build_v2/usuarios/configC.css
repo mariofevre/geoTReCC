@@ -1,0 +1,120 @@
+#formconfig{
+	width:70vw;
+	height:70vh;
+	display:none;
+	position:fixed;
+	top:15vh;
+	right:15vw;
+	background-color:#fff;
+	border:2px solid #08afd9;
+	box-shadow:5px 5px 10px #000;
+	z-index:6;
+	overflow-y:scroll;
+}
+
+#formconfig[estado='activo']{
+	display:block;
+}
+
+
+
+#formconfig a{
+	border:2px solid #08afd9;
+	text-align:right;
+	width:auto;
+	box-shadow:2px 2px 4px #000;
+}
+#formconfig a:hover{
+	background-color:#08afd9;
+	border:2px solid #08afd9;
+	box-shadow:2px 2px 4px #000;
+}
+
+#formconfig input{
+	height:1vw;
+}
+#cerr{
+	display:block;
+	position:absolute;
+	right:10px;
+	top:1vw;
+	max-width:30%;
+}
+
+#formconfig #editarMarco a.guarda{
+	border:none;
+}
+
+#formconfig #editarMarco a img#listo{
+	display:none;
+}
+
+#formconfig #editarMarco a img#cargando{
+	display:none;
+	width:15px;
+}
+
+#formconfig #editarMarco a[estado='guardando'] img#cargando{
+	display:inline-block;
+}
+
+#formconfig #editarMarco a[estado='listo'] img#listo{
+	display:inline-block;	
+}
+
+
+
+form#eliminarpermiso span{
+	display:inline-block;
+	width:calc(70vw / 6);
+	font-family:inherit;
+}
+form#eliminarpermiso [borrada='si']{
+	background-color:#ddd;
+	color:#999;
+}
+#datos select{
+	display:inline-block;
+	width:calc(70vw / 6);
+	font-family:inherit;
+}
+#datos select option{
+	font-family:inherit;
+}
+#datos select #log{
+	font-size:70%;
+	font-weight:bold;
+}
+
+#formconfig[modo='dibujando']{
+	width:100px;
+	right:0px;
+}
+#formconfig #modulos{
+	position:absolute;
+	right:10px;
+	top:100px;
+}
+#formconfig #modulos span{
+	width:150px;
+	font-size:10px;
+	display:inline-block;
+}
+#formconfig #modulos span.img{
+	width:50px;
+	text-align:center;
+}
+
+#formconfig #modulos span, #formconfig #modulos input{
+	vertical-align:middle;
+}
+
+#formconfig #componente_centros input{
+font-size:10px;
+
+}
+
+#formconfig #componente_centros .modelo{
+
+display:none;
+}

@@ -1,0 +1,173 @@
+#page div#navegador{
+	width: auto;
+	height: 26px;
+	display:block;
+	position:absolute;
+	top:2px;
+	right:2px;
+	background-color:transparent;
+	border:none;
+	z-index:6;	
+	box-sizing: border-box;
+}	
+
+div#navegador *{
+	box-sizing: border-box;
+}
+
+#navegador > div{	
+	height: 26px;
+	vertical-align: top;
+	display: inline-block;
+	line-height:auto;
+}
+
+
+
+#navegador > div#buscadatos{
+	border: 1px solid #08afd9;
+	box-shadow: 2px 2px 4px #000;
+}
+
+#navegador > div#home{
+	margin-left: 2px;
+	width: auto;
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	border: 1px solid #08afd9;
+	z-index: 6;
+	vertical-align: middle;
+	box-shadow: 2px 2px 4px #000;
+	left:-25px;
+}
+
+#navegador > div#home img{
+  margin: 4px;
+}
+
+#navegador > div#buscadatos input{
+    height: 20px;
+    font-size:12px;
+}
+
+#navegador[registrado='si'] #hola{
+	display:inline-block;
+}
+#navegador[registrado='no'] div#acceso > #hola{
+	display:none;
+}
+
+
+#navegador[registrado='si'] #botonsalir{
+	display:inline-block;
+}
+#navegador[registrado='si'] #configuracion{
+	display:inline-block;
+}
+	
+#navegador[registrado='si']	#botonacceder{
+	display:none;
+}	
+#navegador div#acceso{
+	margin-left:2px;
+	width: auto;
+	display:inline-block;
+	position:relative;
+	background-color:#fff;
+	border:1px solid #08afd9;
+	z-index:6;
+	vertical-align:middle;
+	box-shadow:2px 2px 4px #000;
+}	
+
+#navegador > div#acceso .auxtx{	
+	vertical-align: top;	
+}
+
+#navegador div#acceso > #hola{
+	display:unset;
+}
+
+#navegador div#configuracion > a{
+	margin-left:2px;
+	width: auto;
+	height: 24px;
+	display:inline-block;
+	position:relative;
+	background-color:#fff;
+	border:1px solid #08afd9;
+	z-index:6;
+	vertical-align:middle;
+	box-shadow:2px 2px 4px #000;
+}	
+
+
+#navegador #configuracion #cargandogif{
+	margin-left:2px;
+	width: auto;
+	height: 30px;
+	display:inline-block;
+	position:relative;
+	background-color:#fff;
+	border:1px solid #08afd9;
+	z-index:6;
+	vertical-align:middle;
+	box-shadow:2px 2px 4px #000;	
+}
+#navegador #configuracion #cargandogif[cargando='no']{
+	display:none;
+}
+		
+#acceso{
+	width: 70px;
+	height: 30px;
+	display:inline-block;
+	position:relative;
+	background-color:#fff;
+	border:1px solid #08afd9;
+	z-index:6;
+}
+
+#acceso #botonacceder{
+	line-height:auto;
+	display:block;
+	display: inline-block;
+	vertical-align: baseline;
+	position: relative;
+}
+#acceso #botonacceder img{
+	margin: 2px 1px;
+	vertical-align: baseline;
+	display: inline-block;
+	position: relative;
+}
+
+#acceso #botonsalir{
+	line-height:auto;
+	display:none;
+}
+#formacceso, #formusuarios{
+	display:none;
+}
+#formacceso, #formconfig{
+	display:none;
+}
+#formacceso, #configuracion > a{
+	display:none;
+	height:100%;
+}
+
+
+
+#navegador div#configuracion > a img{
+	margin: 2px 1px;
+}
+
+#buscadatos{
+	display: inline-block;
+}
+
+#buscadatos #cargandogif{
+	display:none;
+}
